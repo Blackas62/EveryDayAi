@@ -34,10 +34,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-sm font-semibold">Email</h3>
                 <a
-                  href="mailto:graham.blackwell18@gmail.com"
+                  href="mailto:Graham@EveryDayAiWithGraham.com"
                   className="mt-1 block text-sm text-muted-foreground hover:text-primary"
                 >
-                  graham.blackwell18@gmail.com
+                  Graham@EveryDayAiWithGraham.com
                 </a>
               </div>
               <div>
