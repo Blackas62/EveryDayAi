@@ -86,12 +86,12 @@ const caseStudies = [
       "Prototype generating structured estimates from drawing uploads. Dramatically reduces the time from drawings to cost estimate.",
   },
   {
-    title: "Parallel.Net",
+    title: "Stock Manager",
     subtitle: "Warehouse Management System",
     problem:
-      "A book distribution business was running on a decades-old Microsoft Access database. No web access, no barcode scanning, limited reporting, and constant risk of data loss.",
+      "A distribution business was running on a decades-old Microsoft Access database. No web access, no barcode scanning, limited reporting, and constant risk of data loss.",
     solution:
-      "Rebuilt the entire system as a modern web application with ISBN barcode scanning, real-time stock management, publisher tracking, storage charge invoicing (PDF + Excel), and carrier integration for Royal Mail and DHL.",
+      "Rebuilt the entire system as a modern web application with barcode scanning, real-time stock management, supplier tracking, storage charge invoicing (PDF + Excel), and carrier integration.",
     tech: ["Next.js", "Supabase", "PostgreSQL", "Vercel", "Resend", "Barcode Scanning"],
     result:
       "Live and in daily use. Web-accessible from anywhere, with proper user management, activity tracking, and automated invoicing.",
