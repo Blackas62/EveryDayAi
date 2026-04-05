@@ -72,7 +72,7 @@ const caseStudies = [
       "Built a progressive web app that pairs hospital workers within 2km of their workplace at end of shift for safe walking companionship. Hospitals subscribe and their staff get access automatically based on location.",
     tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "WebSockets", "Leaflet Maps", "PWA"],
     result:
-      "Beta testing with nurses at Ramsay Hospital Epping. $5K/year hospital subscription model. AI monitoring for misuse detection without overriding human decisions.",
+      "Fully built and working. $5K/year hospital subscription model. AI monitoring for misuse detection without overriding human decisions.",
   },
   {
     title: "EstimateAI",
