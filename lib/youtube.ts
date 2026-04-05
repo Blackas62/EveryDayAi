@@ -7,7 +7,7 @@ export interface YouTubeVideo {
 }
 
 // Graham's YouTube channel ID — EveryDayAiWithGraham
-const CHANNEL_ID = "UCxxxxxxxxxxxxxxxxxxxxxxxx"; // TODO: Replace with actual channel ID
+const CHANNEL_ID = "UCovSSLY1ZF43X39sZdNU90A";
 
 export async function getLatestVideos(
   maxResults = 9
