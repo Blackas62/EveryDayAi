@@ -22,7 +22,7 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold text-primary">
-            EveryDay <span className="text-accent">AI</span> with Graham
+            EveryDay<span className="text-accent">Ai</span>WithGraham
           </span>
         </Link>
 

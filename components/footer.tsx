@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <span className="text-lg font-bold text-primary">
-              EveryDay <span className="text-accent">AI</span> with Graham
+              EveryDay<span className="text-accent">Ai</span>WithGraham
             </span>
             <p className="mt-2 text-sm text-muted-foreground">
               AI solutions for real businesses. Making automation accessible and
