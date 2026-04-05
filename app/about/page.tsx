@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
   title: "About",
@@ -8,38 +7,6 @@ export const metadata: Metadata = {
     "Graham Blackwell — from finance and operations to AI solutions. 20+ years of business experience, now helping companies work smarter with AI.",
 };
 
-const timeline = [
-  {
-    period: "2023 — Present",
-    role: "AI Solutions & Consulting",
-    detail:
-      "Building AI agents, automated pipelines, and custom software for businesses. Daily AI user since December 2022. YouTube channel educating older Australians about practical AI.",
-  },
-  {
-    period: "2023 — 2025",
-    role: "Finance & Business Systems Manager — Halo Civil Engineering",
-    detail:
-      "$60M turnover, AFR Top 100 fastest growing company. Managed finance across 4+ entities. Led Maali Group rescue from voluntary administration, DVH Industries acquisition, Procore implementation, and Philippines remote team setup.",
-  },
-  {
-    period: "2021 — 2023",
-    role: "Business Systems Manager — Decmil",
-    detail:
-      "InEight construction PM suite implementation. HR/Payroll system evaluation. OCR technology for automated AP data capture.",
-  },
-  {
-    period: "2021",
-    role: "Business Systems Specialist — Pilbara Resource Group",
-    detail:
-      "Procore implementation, chart of accounts design, finance integration for construction projects.",
-  },
-  {
-    period: "Earlier Career",
-    role: "Finance & Operations Leadership",
-    detail:
-      "20+ years across finance, operations, treasury, credit management, payroll, and business systems. Hands-on experience with MYOB, Xero, Procore, Definitiv, and more.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -87,8 +54,8 @@ export default function AboutPage() {
                   So I taught myself to build. Python, React, Next.js, APIs —
                   not from a CS degree, but from a genuine need to make things
                   work. I built an AI assistant that manages my email and makes
-                  phone calls. I built a nurse safety app inspired by my
-                  daughter. I built an automated video production pipeline for
+                  phone calls. I built a nurse safety app for hospital workers.
+                  I built an automated video production pipeline for
                   my YouTube channel. Each project taught me something new
                   about what AI can actually do for businesses.
                 </p>
@@ -108,15 +75,8 @@ export default function AboutPage() {
               <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                 <p>
                   Based in Perth, Western Australia. When I&apos;m not building
-                  AI solutions, you&apos;ll find me on the bike — I ride 8km
-                  each way to work and regularly do 60km+ weekend rides with
-                  the &ldquo;Fat Bastards&rdquo; cycling group.
-                </p>
-                <p>
-                  I&apos;m a committed plant-based eater (going on 10+ years),
-                  an active member of the Bayswater Community Men&apos;s Shed,
-                  and a proud dad. My daughter Anna is a nurse in Melbourne —
-                  she&apos;s the inspiration behind the WalkMate safety app.
+                  AI solutions, you&apos;ll find me out on the road bike or
+                  involved in the local community.
                 </p>
                 <p>
                   I run a YouTube channel called{" "}
@@ -134,31 +94,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="mx-auto max-w-6xl" />
-
-      {/* Career Timeline */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Career Highlights
-          </h2>
-          <div className="mt-8 space-y-0">
-            {timeline.map((item, i) => (
-              <div key={i} className="relative border-l-2 border-primary/20 pb-8 pl-6 last:pb-0">
-                <div className="absolute -left-[5px] top-1 h-2 w-2 rounded-full bg-primary" />
-                <div className="text-sm font-medium text-primary">
-                  {item.period}
-                </div>
-                <h3 className="mt-1 font-semibold">{item.role}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  {item.detail}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

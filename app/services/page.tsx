@@ -67,7 +67,7 @@ const caseStudies = [
     title: "WalkMate",
     subtitle: "Nurse Safety Companion App",
     problem:
-      "Hospital nurses finishing evening shifts often walk to their cars alone in poorly lit areas. My daughter Anna, a nurse, highlighted the safety concern — there was no easy way to find a colleague heading the same direction.",
+      "Hospital nurses finishing evening shifts often walk to their cars alone in poorly lit areas. There was no easy way to find a colleague heading the same direction for a safer walk.",
     solution:
       "Built a progressive web app that pairs hospital workers within 2km of their workplace at end of shift for safe walking companionship. Hospitals subscribe and their staff get access automatically based on location.",
     tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "WebSockets", "Leaflet Maps", "PWA"],
