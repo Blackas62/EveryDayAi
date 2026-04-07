@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -7,21 +8,36 @@ export const metadata: Metadata = {
     "Graham Blackwell — from finance and operations to AI solutions. 20+ years of business experience, now helping companies work smarter with AI.",
 };
 
-
 export default function AboutPage() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20">
+      {/* Header with photo */}
+      <section className="bg-gradient-to-br from-secondary via-background to-accent/10 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              About Graham
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Finance and operations professional turned AI builder. I bridge
-              the gap between business needs and technology solutions.
-            </p>
+          <div className="grid items-center gap-10 lg:grid-cols-3">
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative">
+                <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/25 to-primary/15 blur-xl" />
+                <Image
+                  src="/graham.jpg"
+                  alt="Graham Blackwell"
+                  width={280}
+                  height={280}
+                  className="relative rounded-2xl object-cover shadow-lg"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-2">
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                About Graham
+              </h1>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                Finance and operations professional turned AI builder. I bridge
+                the gap between business needs and technology solutions — and I
+                reckon that&apos;s where the magic happens.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -69,29 +85,32 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6 lg:col-span-2">
-              <h2 className="text-2xl font-bold tracking-tight">
-                Beyond Work
-              </h2>
-              <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
-                <p>
-                  Based in Perth, Western Australia. When I&apos;m not building
-                  AI solutions, you&apos;ll find me out on the road bike or
-                  involved in the local community.
-                </p>
-                <p>
-                  I run a YouTube channel called{" "}
-                  <a
-                    href="https://www.youtube.com/@EveryDayAiWithGraham"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    EveryDay AI with Graham
-                  </a>
-                  , specifically aimed at older Australians who want to
-                  understand AI without the tech jargon. Because this stuff
-                  matters for everyone, not just the tech crowd.
-                </p>
+              <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm">
+                <h2 className="text-2xl font-bold tracking-tight">
+                  Beyond Work
+                </h2>
+                <div className="mt-4 space-y-4 text-muted-foreground text-sm leading-relaxed">
+                  <p>
+                    Based in Perth, Western Australia. When I&apos;m not building
+                    AI solutions, you&apos;ll find me out on the road bike —
+                    usually with a group called the Fat Bastards — or involved
+                    with the local Men&apos;s Shed.
+                  </p>
+                  <p>
+                    I run a YouTube channel called{" "}
+                    <a
+                      href="https://www.youtube.com/@EveryDayAiWithGraham"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:underline"
+                    >
+                      EveryDay AI with Graham
+                    </a>
+                    , specifically aimed at older Australians who want to
+                    understand AI without the tech jargon. Because this stuff
+                    matters for everyone, not just the tech crowd.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -99,7 +118,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-primary to-primary/85 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
             Want to work together?
@@ -109,7 +128,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex h-10 items-center justify-center rounded-lg bg-white px-6 text-sm font-medium text-primary transition-colors hover:bg-white/90"
+            className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-sm font-medium text-primary shadow-sm transition-all hover:bg-white/90 hover:shadow-md"
           >
             Get in Touch
           </Link>

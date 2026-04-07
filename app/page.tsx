@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Card,
@@ -50,38 +51,67 @@ const stats = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-background">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              AI solutions for{" "}
-              <span className="text-primary">real businesses</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              I help Australian businesses cut costs and work smarter with
-              practical AI automation, custom software, and hands-on experience
-              from 20+ years in finance and operations.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/services"
-                className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80"
-              >
-                See What I Can Build
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-10 items-center justify-center rounded-lg border border-border px-6 text-sm font-medium transition-colors hover:bg-muted"
-              >
-                Get in Touch
-              </Link>
+      {/* Hero — warm, personal, photo-forward */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-accent/10">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-sm font-medium tracking-wide text-accent uppercase">EveryDay AI with Graham</p>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+                G&apos;day, I&apos;m Graham.
+              </h1>
+              <p className="mt-4 text-xl leading-relaxed text-foreground/80">
+                I help Australian businesses make sense of AI — and put it to work.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                After 20+ years in finance and operations, I got my hands dirty
+                with AI and never looked back. Now I build practical tools,
+                automate workflows, and help businesses save time and money
+                with technology that actually works.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex h-11 items-center justify-center rounded-xl bg-primary px-7 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/85 hover:shadow-md"
+                >
+                  Let&apos;s Have a Chat
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex h-11 items-center justify-center rounded-xl border border-border bg-card px-7 text-sm font-medium transition-all hover:bg-secondary hover:shadow-sm"
+                >
+                  See My Work
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-accent/30 to-primary/20 blur-2xl" />
+                <Image
+                  src="/graham.jpg"
+                  alt="Graham Blackwell"
+                  width={380}
+                  height={380}
+                  className="relative rounded-2xl object-cover shadow-lg"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Personal tagline strip */}
+      <section className="border-y border-border/60 bg-card py-8">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <p className="text-lg italic text-muted-foreground">
+            &ldquo;I don&apos;t do jargon or hype. If AI can help your business,
+            I&apos;ll show you how. If it can&apos;t, I&apos;ll tell you that too.&rdquo;
+          </p>
+        </div>
+      </section>
+
+      {/* What I Do */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
@@ -94,7 +124,7 @@ export default function Home() {
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <Card key={service.title} className="transition-shadow hover:shadow-md">
+              <Card key={service.title} className="border-border/60 bg-card shadow-sm transition-all hover:shadow-md">
                 <CardHeader>
                   <div className="mb-2 text-primary">{service.icon}</div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>
@@ -119,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Credibility Strip */}
-      <section className="border-y bg-muted/40 py-12 sm:py-16">
+      <section className="border-y border-border/60 bg-secondary/50 py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
             {stats.map((stat) => (
@@ -136,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YouTube Preview — placeholder until Phase 4 wires up API */}
+      {/* YouTube Preview */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
@@ -151,12 +181,12 @@ export default function Home() {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="overflow-hidden rounded-lg border bg-card"
+                className="overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm"
               >
-                <div className="aspect-video bg-muted" />
+                <div className="aspect-video bg-secondary" />
                 <div className="p-4">
-                  <div className="h-4 w-3/4 rounded bg-muted" />
-                  <div className="mt-2 h-3 w-1/2 rounded bg-muted" />
+                  <div className="h-4 w-3/4 rounded bg-secondary" />
+                  <div className="mt-2 h-3 w-1/2 rounded bg-secondary" />
                 </div>
               </div>
             ))}
@@ -172,19 +202,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="bg-primary py-16 sm:py-20">
+      {/* Footer CTA — warm, not corporate */}
+      <section className="bg-gradient-to-br from-primary to-primary/85 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
-            Ready to put AI to work for your business?
+            Curious how AI could help your business?
           </h2>
           <p className="mt-4 text-primary-foreground/80">
-            No jargon. No hype. Just practical solutions that save you time and
-            money.
+            Drop me a line — I&apos;m always happy to have a yarn about what&apos;s
+            possible.
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex h-10 items-center justify-center rounded-lg bg-white px-6 text-sm font-medium text-primary transition-colors hover:bg-white/90"
+            className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-sm font-medium text-primary shadow-sm transition-all hover:bg-white/90 hover:shadow-md"
           >
             Let&apos;s Talk
           </Link>

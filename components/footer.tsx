@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/40">
+    <footer className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <span className="text-lg font-bold text-primary">EveryDay<span className="text-accent">Ai</span>WithGraham</span>
+            <span className="text-lg font-bold text-foreground">EveryDay<span className="text-accent">Ai</span><span className="font-normal text-muted-foreground">WithGraham</span></span>
             <p className="mt-2 text-sm text-muted-foreground">
-              AI solutions for real businesses. Making automation accessible and
-              practical.
+              Practical AI solutions for Australian businesses. No jargon, no
+              hype — just tools that work.
             </p>
           </div>
 

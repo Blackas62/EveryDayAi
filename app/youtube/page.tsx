@@ -14,7 +14,7 @@ export default async function YouTubePage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-secondary via-background to-accent/10 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             YouTube

@@ -113,7 +113,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-secondary via-background to-accent/10 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             Services & Case Studies
@@ -133,7 +133,7 @@ export default function ServicesPage() {
           </h2>
           <div className="mt-8 grid gap-8 lg:grid-cols-3">
             {serviceCategories.map((cat) => (
-              <Card key={cat.title}>
+              <Card key={cat.title} className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">{cat.title}</CardTitle>
                 </CardHeader>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-primary to-primary/85 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
             Got a problem that needs solving?
@@ -237,7 +237,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex h-10 items-center justify-center rounded-lg bg-white px-6 text-sm font-medium text-primary transition-colors hover:bg-white/90"
+            className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-sm font-medium text-primary shadow-sm transition-all hover:bg-white/90 hover:shadow-md"
           >
             Start a Conversation
           </Link>
