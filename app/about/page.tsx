@@ -58,6 +58,14 @@ export default function AboutPage() {
                   processes.
                 </p>
                 <p>
+                  One stint stands out. As CFO of a regional airline, I steered
+                  the business through the 9/11 aftermath and the Ansett
+                  collapse landing at the same time — renegotiating with
+                  bankers, holding the cash position, keeping 200+ staff paid
+                  while the industry was in freefall. You learn a lot about
+                  what matters when everything&apos;s on the line at once.
+                </p>
+                <p>
                   When AI tools started becoming practical in late 2022, I saw
                   the opportunity immediately. Not the hype — the real,
                   practical applications. The accounts payable clerk spending
@@ -65,6 +73,12 @@ export default function AboutPage() {
                   cost report. The manager drowning in emails. These are
                   problems I&apos;d spent my career trying to solve with
                   spreadsheets and systems. AI changes everything.
+                </p>
+                <p>
+                  I&apos;ve been writing about business disruption and
+                  data-driven decision-making since 2018 — so this isn&apos;t a
+                  bandwagon for me. It&apos;s the direction I&apos;ve been
+                  pointing at for years, finally with the tools to back it up.
                 </p>
                 <p>
                   So I taught myself to build. Python, React, Next.js, APIs —

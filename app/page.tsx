@@ -48,6 +48,21 @@ const stats = [
   { value: "Daily", label: "AI User Since Dec 2022" },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "The senior Procore support manager said Graham's understanding and implementation was at a quality equivalent to his top-level support staff.",
+    name: "Ken Banks",
+    role: "Non-Executive Chairman, Paterson Resources",
+  },
+  {
+    quote:
+      "He has a natural talent for detailed forensic financial analysis. His teaching approach is engaging and inspiring — he's passionate about technology and how it can improve business practices and the bottom line.",
+    name: "Shane Powell",
+    role: "People & Culture Consultant, Dept of Transport",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -161,6 +176,38 @@ export default function Home() {
                   {stat.label}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+              What People Say
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              From people I&apos;ve worked with over the years.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {testimonials.map((t) => (
+              <figure
+                key={t.name}
+                className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm"
+              >
+                <blockquote className="text-base leading-relaxed text-foreground/85">
+                  <span className="mr-1 text-accent">&ldquo;</span>
+                  {t.quote}
+                  <span className="ml-1 text-accent">&rdquo;</span>
+                </blockquote>
+                <figcaption className="mt-4 text-sm">
+                  <div className="font-medium">{t.name}</div>
+                  <div className="text-muted-foreground">{t.role}</div>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
