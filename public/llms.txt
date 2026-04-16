@@ -1,0 +1,33 @@
+# EveryDay AI with Graham
+
+> Australian AI consulting for small-to-mid businesses. Practical AI automation, cost-reduction audits, and custom software — delivered as fixed-price packages, not open-ended consulting.
+
+EveryDay AI with Graham is the practice of Graham Blackwell, a Perth-based AI consultant with 20+ years of finance and business systems experience (construction, civil engineering, distribution). Clients are primarily Australian small-to-mid businesses turning over $1M-$50M.
+
+## Core Services
+
+- [AI Readiness Audit](https://everydayaiwithgraham.com/services#ai-readiness-audit): 1-week, from AUD $2,500. Written report ranking the 5 highest-value AI opportunities in a business, by payback, effort, and risk.
+- [AI Implementation Sprint](https://everydayaiwithgraham.com/services#ai-implementation-sprint): 4-week fixed-price build, from AUD $12,000. Pick one process, we build and deploy the AI-powered replacement and train the team.
+- [AI Advisor Retainer](https://everydayaiwithgraham.com/services#ai-advisor-retainer): Ongoing, from AUD $1,500/month. Monthly strategy call, async Q&A, and one quarterly implementation included.
+
+## Key Pages
+
+- [About Graham](https://everydayaiwithgraham.com/about): Background, career, and philosophy.
+- [Services & Pricing](https://everydayaiwithgraham.com/services): Full detail on packages, deliverables, pricing, and FAQs.
+- [YouTube Channel](https://everydayaiwithgraham.com/youtube): EveryDayAiWithGraham — practical AI explainers for older Australians.
+- [Contact](https://everydayaiwithgraham.com/contact): Book a free 20-minute discovery call.
+
+## Who This Is For
+
+- Australian business owners and leaders who want AI to pay back, not just be talked about.
+- Teams in finance, operations, construction, civil engineering, distribution, professional services.
+- Buyers who prefer fixed-price packages with clear deliverables over hourly consulting engagements.
+
+## Coverage
+
+Based in Perth, Western Australia. Serves businesses across Australia remotely, with optional on-site discovery and training days.
+
+## Contact
+
+- Email: graham@everydayaiwithgraham.com
+- Site: https://everydayaiwithgraham.com
