@@ -9,7 +9,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-display: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -41,6 +42,10 @@
   --color-card: var(--card);
   --color-warm: var(--warm);
   --color-warm-foreground: var(--warm-foreground);
+  --color-dark: var(--dark);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-dark-muted: var(--dark-muted);
+  --color-dark-border: var(--dark-border);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -68,6 +73,11 @@
   --accent-foreground: oklch(0.25 0.015 55);
   --warm: oklch(0.72 0.14 70);
   --warm-foreground: oklch(0.25 0.02 70);
+  /* Dark section palette — deep teal bookends + muted warm whites */
+  --dark: oklch(0.20 0.03 200);
+  --dark-foreground: oklch(0.97 0.01 85);
+  --dark-muted: oklch(0.72 0.02 85);
+  --dark-border: oklch(0.30 0.03 200);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.91 0.015 80);
   --input: oklch(0.91 0.015 80);
@@ -93,9 +103,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
-  html {
-    @apply font-sans;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
   }
 }

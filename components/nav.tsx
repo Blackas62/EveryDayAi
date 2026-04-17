@@ -18,10 +18,10 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 border-b border-dark-border/60 bg-dark/95 backdrop-blur supports-[backdrop-filter]:bg-dark/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-foreground">EveryDay<span className="text-accent">Ai</span><span className="font-normal text-muted-foreground">WithGraham</span></span>
+          <span className="text-xl font-bold text-dark-foreground">EveryDay<span className="text-accent">Ai</span><span className="font-normal text-dark-muted">WithGraham</span></span>
         </Link>
 
         {/* Desktop nav */}
@@ -30,10 +30,10 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted ${
+              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-dark-foreground ${
                 pathname === link.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "text-accent"
+                  : "text-dark-muted"
               }`}
             >
               {link.label}
@@ -41,7 +41,7 @@ export function Nav() {
           ))}
           <Link
             href="/contact"
-            className="ml-2 inline-flex h-8 items-center justify-center rounded-xl bg-primary px-4 text-[0.8rem] font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/85 hover:shadow-md"
+            className="ml-2 inline-flex h-8 items-center justify-center rounded-xl bg-accent px-4 text-[0.8rem] font-medium text-foreground shadow-sm transition-all hover:bg-accent/85 hover:shadow-md"
           >
             Get in Touch
           </Link>
@@ -49,7 +49,7 @@ export function Nav() {
 
         {/* Mobile nav */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted md:hidden">
+          <SheetTrigger className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-dark-muted transition-colors hover:text-dark-foreground md:hidden">
             <svg
               className="h-5 w-5"
               fill="none"

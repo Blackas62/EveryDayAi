@@ -12,27 +12,29 @@ export default function AboutPage() {
   return (
     <>
       {/* Header with photo */}
-      <section className="bg-gradient-to-br from-secondary via-background to-accent/10 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative overflow-hidden bg-dark py-20 text-dark-foreground sm:py-28">
+        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/40" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-10 lg:grid-cols-3">
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
-                <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/25 to-primary/15 blur-xl" />
+                <div className="absolute inset-0 -z-10 translate-y-6 scale-90 rounded-full bg-gradient-to-br from-accent/40 via-primary/30 to-transparent blur-3xl" />
                 <Image
-                  src="/graham.jpg"
+                  src="/graham-cutout.png"
                   alt="Graham Blackwell"
-                  width={280}
-                  height={280}
-                  className="relative rounded-2xl object-cover shadow-lg"
+                  width={340}
+                  height={340}
+                  className="relative drop-shadow-2xl"
                   priority
                 />
               </div>
             </div>
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <p className="text-sm font-medium tracking-widest text-accent uppercase">About</p>
+              <h1 className="mt-3 font-display text-5xl tracking-tight sm:text-6xl lg:text-7xl">
                 About Graham
               </h1>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-6 text-lg leading-relaxed text-dark-muted">
                 Finance and operations professional turned AI builder. I bridge
                 the gap between business needs and technology solutions — and I
                 reckon that&apos;s where the magic happens.

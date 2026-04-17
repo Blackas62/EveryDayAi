@@ -66,19 +66,20 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      {/* Hero — warm, personal, photo-forward */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-accent/10">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+      {/* Hero — dark, photo-forward */}
+      <section className="relative overflow-hidden bg-dark text-dark-foreground">
+        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/40" />
+        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:py-32">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-sm font-medium tracking-wide text-accent uppercase">EveryDay AI with Graham</p>
-              <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+              <p className="text-sm font-medium tracking-widest text-accent uppercase">EveryDay AI with Graham</p>
+              <h1 className="mt-3 font-display text-6xl tracking-tight sm:text-7xl lg:text-8xl">
                 G&apos;day, I&apos;m Graham.
               </h1>
-              <p className="mt-4 text-xl leading-relaxed text-foreground/80">
+              <p className="mt-6 text-xl leading-relaxed text-dark-foreground/90">
                 I help Australian businesses make sense of AI — and put it to work.
               </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-base leading-relaxed text-dark-muted">
                 After 20+ years in finance and operations, I got my hands dirty
                 with AI and never looked back. Now I build practical tools,
                 automate workflows, and help businesses save time and money
@@ -87,13 +88,13 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-xl bg-primary px-7 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/85 hover:shadow-md"
+                  className="inline-flex h-11 items-center justify-center rounded-xl bg-accent px-7 text-sm font-medium text-foreground shadow-sm transition-all hover:bg-accent/85 hover:shadow-md"
                 >
                   Let&apos;s Have a Chat
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex h-11 items-center justify-center rounded-xl border border-border bg-card px-7 text-sm font-medium transition-all hover:bg-secondary hover:shadow-sm"
+                  className="inline-flex h-11 items-center justify-center rounded-xl border border-dark-border bg-transparent px-7 text-sm font-medium text-dark-foreground transition-all hover:bg-dark-border/40"
                 >
                   See My Work
                 </Link>
@@ -101,13 +102,13 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-accent/30 to-primary/20 blur-2xl" />
+                <div className="absolute inset-0 -z-10 translate-y-8 scale-90 rounded-full bg-gradient-to-br from-accent/40 via-primary/30 to-transparent blur-3xl" />
                 <Image
-                  src="/graham.jpg"
+                  src="/graham-cutout.png"
                   alt="Graham Blackwell"
-                  width={380}
-                  height={380}
-                  className="relative rounded-2xl object-cover shadow-lg"
+                  width={460}
+                  height={460}
+                  className="relative drop-shadow-2xl"
                   priority
                 />
               </div>
@@ -163,16 +164,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Credibility Strip */}
-      <section className="border-y border-border/60 bg-secondary/50 py-12 sm:py-16">
+      {/* Credibility Strip — dark with gold accents */}
+      <section className="bg-dark py-14 sm:py-20 text-dark-foreground">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-10 text-center lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-3xl font-bold text-primary">
+                <div className="text-4xl font-bold text-dark-foreground sm:text-5xl">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-sm text-muted-foreground">
+                <div className="mx-auto mt-3 h-0.5 w-10 bg-accent" />
+                <div className="mt-3 text-sm text-dark-muted">
                   {stat.label}
                 </div>
               </div>
@@ -249,19 +251,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer CTA — warm, not corporate */}
-      <section className="bg-gradient-to-br from-primary to-primary/85 py-16 sm:py-20">
+      {/* Footer CTA — dark with gold CTA */}
+      <section className="bg-dark py-16 sm:py-24 text-dark-foreground">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl">
+          <h2 className="text-3xl font-bold tracking-tight text-dark-foreground sm:text-4xl">
             Curious how AI could help your business?
           </h2>
-          <p className="mt-4 text-primary-foreground/80">
+          <p className="mt-4 text-dark-muted">
             Drop me a line — I&apos;m always happy to have a yarn about what&apos;s
             possible.
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-sm font-medium text-primary shadow-sm transition-all hover:bg-white/90 hover:shadow-md"
+            className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-accent px-7 text-sm font-medium text-foreground shadow-sm transition-all hover:bg-accent/85 hover:shadow-md"
           >
             Let&apos;s Talk
           </Link>
