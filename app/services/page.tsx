@@ -299,6 +299,21 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Voice assistant nudge */}
+      <section className="border-t bg-accent/5 py-10 sm:py-12">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+            Prefer to talk?
+          </p>
+          <h2 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl">
+            Ask our AI assistant about any of the packages.
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+            Click the voice button on the bottom-right of the page. It can answer questions about the Audit, Sprint, or Retainer — or take your details so Graham can call you back within 24 hours. It is an AI assistant, not Graham, and the call is logged so he can follow up properly.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ — AEO-friendly, question-first */}
       <section className="border-t bg-muted/20 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
