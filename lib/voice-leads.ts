@@ -15,23 +15,27 @@ export type VoiceLead = {
 };
 
 export async function notifyVoiceLead(lead: VoiceLead) {
-  const results = await Promise.allSettled([
-    emailVoiceLead(lead),
-    telegramVoiceLead(lead),
-  ]);
+  const tasks: [string, Promise<unknown>][] = [
+    ["operator_email", emailOperator(lead)],
+    ["telegram", telegramVoiceLead(lead)],
+  ];
+  if (lead.email) {
+    tasks.push(["caller_email", emailCaller(lead)]);
+  }
 
+  const results = await Promise.allSettled(tasks.map(([, p]) => p));
   const failures = results
-    .map((r, i) => (r.status === "rejected" ? { channel: i === 0 ? "email" : "telegram", reason: r.reason } : null))
-    .filter((x): x is { channel: string; reason: unknown } => x !== null);
+    .map((r, i) => (r.status === "rejected" ? { channel: tasks[i][0], reason: String(r.reason) } : null))
+    .filter((x): x is { channel: string; reason: string } => x !== null);
 
   if (failures.length) {
-    console.error("Voice lead notification failures:", failures);
+    console.error("Voice lead notification failures:", JSON.stringify(failures));
   }
 
   return { delivered: results.filter((r) => r.status === "fulfilled").length, failures };
 }
 
-async function emailVoiceLead(lead: VoiceLead) {
+async function emailOperator(lead: VoiceLead) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) throw new Error("RESEND_API_KEY not configured");
 
@@ -77,7 +81,7 @@ async function emailVoiceLead(lead: VoiceLead) {
     },
     body: JSON.stringify({
       from: "EveryDay AI Voice <noreply@everydayaiwithgraham.com>",
-      to: "graham.blackwell18@gmail.com",
+      to: "graham@everydayaiwithgraham.com",
       subject,
       reply_to: lead.email || undefined,
       html,
@@ -87,6 +91,59 @@ async function emailVoiceLead(lead: VoiceLead) {
   if (!res.ok) {
     const body = await res.text();
     throw new Error(`Resend API error ${res.status}: ${body}`);
+  }
+
+  return res.json();
+}
+
+async function emailCaller(lead: VoiceLead) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+  if (!lead.email) throw new Error("No caller email");
+
+  const firstName = (lead.name || "").split(" ")[0] || "there";
+  const packageLabel = {
+    audit: "AI Readiness Audit",
+    sprint: "AI Implementation Sprint",
+    retainer: "AI Advisor Retainer",
+  }[lead.interest?.toLowerCase() || ""] || null;
+
+  const lines: string[] = [
+    `<p>Hi ${escapeHtml(firstName)},</p>`,
+    `<p>Thanks for speaking with my AI assistant on everydayaiwithgraham.com just now — I've had the details passed through and I'll personally call you back within 24 hours.</p>`,
+  ];
+
+  if (lead.summary) {
+    lines.push(`<p><strong>What we covered:</strong><br>${escapeHtml(lead.summary)}</p>`);
+  }
+  if (packageLabel) {
+    lines.push(`<p>You seemed most interested in the <strong>${escapeHtml(packageLabel)}</strong> — I'll have some specifics ready when I call.</p>`);
+  }
+
+  lines.push(
+    `<p>In the meantime, the full breakdown of the three packages is here: <a href="https://everydayaiwithgraham.com/services">everydayaiwithgraham.com/services</a></p>`,
+    `<p>If anything is time-sensitive, just reply to this email.</p>`,
+    `<p>Cheers,<br>Graham Blackwell<br>EveryDay AI with Graham</p>`,
+  );
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "Graham Blackwell <graham@everydayaiwithgraham.com>",
+      to: lead.email,
+      subject: `Thanks ${firstName} — I'll call you back within 24 hours`,
+      reply_to: "graham@everydayaiwithgraham.com",
+      html: lines.join("\n"),
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Resend caller-email error ${res.status}: ${body}`);
   }
 
   return res.json();
