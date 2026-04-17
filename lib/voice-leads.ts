@@ -1,3 +1,5 @@
+import nodemailer from "nodemailer";
+
 export type VoiceLead = {
   name?: string;
   email?: string;
@@ -35,10 +37,20 @@ export async function notifyVoiceLead(lead: VoiceLead) {
   return { delivered: results.filter((r) => r.status === "fulfilled").length, failures };
 }
 
-async function emailOperator(lead: VoiceLead) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+function gmailTransporter() {
+  const user = process.env.GMAIL_USER;
+  const pass = process.env.GMAIL_APP_PASSWORD;
+  if (!user || !pass) throw new Error("GMAIL_USER or GMAIL_APP_PASSWORD not configured");
+  return nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user, pass },
+  });
+}
 
+async function emailOperator(lead: VoiceLead) {
+  const user = process.env.GMAIL_USER!;
   const subject = lead.name
     ? `Voice lead from ${lead.name}${lead.business_name ? ` (${lead.business_name})` : ""}`
     : "Voice lead — caller did not leave details";
@@ -73,32 +85,17 @@ async function emailOperator(lead: VoiceLead) {
     </table>
   `;
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from: "EveryDay AI Voice <noreply@everydayaiwithgraham.com>",
-      to: "graham@everydayaiwithgraham.com",
-      subject,
-      reply_to: lead.email || undefined,
-      html,
-    }),
+  return gmailTransporter().sendMail({
+    from: `"EveryDay AI Voice" <${user}>`,
+    to: user,
+    subject,
+    replyTo: lead.email || undefined,
+    html,
   });
-
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Resend API error ${res.status}: ${body}`);
-  }
-
-  return res.json();
 }
 
 async function emailCaller(lead: VoiceLead) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+  const user = process.env.GMAIL_USER!;
   if (!lead.email) throw new Error("No caller email");
 
   const firstName = (lead.name || "").split(" ")[0] || "there";
@@ -126,27 +123,13 @@ async function emailCaller(lead: VoiceLead) {
     `<p>Cheers,<br>Graham Blackwell<br>EveryDay AI with Graham</p>`,
   );
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from: "Graham Blackwell <graham@everydayaiwithgraham.com>",
-      to: lead.email,
-      subject: `Thanks ${firstName} — I'll call you back within 24 hours`,
-      reply_to: "graham@everydayaiwithgraham.com",
-      html: lines.join("\n"),
-    }),
+  return gmailTransporter().sendMail({
+    from: `"Graham Blackwell" <${user}>`,
+    to: lead.email,
+    subject: `Thanks ${firstName} — I'll call you back within 24 hours`,
+    replyTo: user,
+    html: lines.join("\n"),
   });
-
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Resend caller-email error ${res.status}: ${body}`);
-  }
-
-  return res.json();
 }
 
 async function telegramVoiceLead(lead: VoiceLead) {
