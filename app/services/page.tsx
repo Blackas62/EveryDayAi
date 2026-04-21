@@ -116,14 +116,14 @@ const caseStudies = [
   },
   {
     title: "WalkMate",
-    subtitle: "Nurse Safety Companion App",
+    subtitle: "Safety Companion App for Hospital Workers",
     problem:
-      "Hospital nurses finishing evening shifts often walk to their cars alone in poorly lit areas. There was no easy way to find a colleague heading the same direction for a safer walk.",
+      "Hospital nurses finishing evening shifts often walk to their cars alone in poorly lit areas. The design brief: pair workers within 2km of the same workplace at end of shift for a safer walk to the car park — without adding a download step or account setup.",
     solution:
-      "Built a progressive web app that pairs hospital workers within 2km of their workplace at end of shift for safe walking companionship. Hospitals subscribe and their staff get access automatically based on location.",
+      "Built as a progressive web app (works from any phone browser, no install) with real-time location pairing, in-app chat, a location-gated access rule so only staff of the subscribing hospital can join, and an AI moderation layer for misuse detection that flags patterns without overriding human decisions.",
     tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "WebSockets", "Leaflet Maps", "PWA"],
     result:
-      "Fully built and working. $5K/year hospital subscription model. AI monitoring for misuse detection without overriding human decisions.",
+      "End-to-end PWA delivered on Replit + Neon Postgres. Demonstrates real-time geolocation pairing, WebSocket messaging, healthcare-worker UX, and a responsible-AI moderation pattern — the kind of architecture that transfers cleanly to workforce-safety and field-services use cases.",
   },
   {
     title: "YouTube Pipeline",
