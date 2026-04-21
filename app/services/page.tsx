@@ -12,13 +12,13 @@ import {
 export const metadata: Metadata = {
   title: "AI Consulting for Australian Businesses — Services & Pricing",
   description:
-    "Three clear ways to work with us: a 1-week AI Readiness Audit, a 4-week Implementation Sprint, or an ongoing AI Advisor Retainer. Fixed prices, clear deliverables.",
+    "Three clear ways to work with us: a 1-week AI Readiness Review, a 4-week Implementation Sprint, or an ongoing AI Advisor Retainer. Fixed prices, clear deliverables.",
 };
 
 const offers = [
   {
-    id: "ai-readiness-audit",
-    name: "AI Readiness Audit",
+    id: "ai-readiness-review",
+    name: "AI Readiness Review",
     tagline: "Find out exactly where AI will pay you back",
     price: "From AUD $2,500",
     duration: "1 week",
@@ -77,8 +77,8 @@ const offers = [
 
 const faqs = [
   {
-    q: "What is an AI Readiness Audit?",
-    a: "An AI Readiness Audit is a structured, one-week review of your business where we identify the five workflows or processes where AI will deliver the biggest, fastest return. You receive a written report ranking each opportunity by estimated payback, effort, and risk — plus a recommended next step for each one. It is designed for owners and leaders who know AI matters but don't yet know where to start.",
+    q: "What is an AI Readiness Review?",
+    a: "An AI Readiness Review is a structured, one-week look at your business where we identify the five workflows or processes where AI will deliver the biggest, fastest return. You receive a written report ranking each opportunity by estimated payback, effort, and risk — plus a recommended next step for each one. It is designed for owners and leaders who know AI matters but don't yet know where to start.",
   },
   {
     q: "How is this different from a generic AI consultant?",
@@ -93,8 +93,8 @@ const faqs = [
     a: "Mostly remote, with optional on-site days for discovery calls and team training. We are based in Perth, Western Australia, and work with businesses right across Australia.",
   },
   {
-    q: "What happens after the Audit?",
-    a: "You own the report and can act on it however you choose — in-house, with another consultant, or with us. About two-thirds of Audit clients move into an Implementation Sprint on one of the top opportunities, but there is no obligation.",
+    q: "What happens after the Review?",
+    a: "You own the report and can act on it however you choose — in-house, with another consultant, or with us. About two-thirds of Review clients move into an Implementation Sprint on one of the top opportunities, but there is no obligation.",
   },
   {
     q: "Do you sign NDAs?",
@@ -237,7 +237,7 @@ export default function ServicesPage() {
             Which package is right for you?
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Most businesses start with the Audit so we can agree on the highest-value opportunity before any build work begins.
+            Most businesses start with the Review so we can agree on the highest-value opportunity before any build work begins.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl space-y-10">
@@ -309,7 +309,7 @@ export default function ServicesPage() {
             Ask our AI assistant about any of the packages.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
-            Click the voice button on the bottom-right of the page. It can answer questions about the Audit, Sprint, or Retainer — or take your details so Graham can call you back within 24 hours. It is an AI assistant, not Graham, and the call is logged so he can follow up properly.
+            Click the voice button on the bottom-right of the page. It can answer questions about the Review, Sprint, or Retainer — or take your details so Graham can call you back within 24 hours. It is an AI assistant, not Graham, and the call is logged so he can follow up properly.
           </p>
         </div>
       </section>

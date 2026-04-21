@@ -10,9 +10,9 @@ Graham Blackwell is the founder of EveryDayAi. He spent 20+ years running financ
 
 Perth, Western Australia. Most engagements run remotely over video calls and shared documents. On-site days are available for discovery sessions and team training, and can be added to any package at cost.
 
-## Can I buy just the AI Readiness Audit without committing to anything further?
+## Can I buy just the AI Readiness Review without committing to anything further?
 
-Yes. The Audit is a one-off, fixed-price engagement. You own the written report and can act on it however you choose — in-house, with another provider, or with us. There is no obligation. Most clients do go on to a Sprint on one of the top opportunities the Audit identifies, but it is not required.
+Yes. The Review is a one-off, fixed-price engagement. You own the written report and can act on it however you choose — in-house, with another provider, or with us. There is no obligation. Most clients do go on to a Sprint on one of the top opportunities the Review identifies, but it is not required.
 
 ## What size business do you work with?
 
@@ -44,7 +44,7 @@ A free 20-minute video call with Graham to understand what you are trying to ach
 
 ## How quickly can we start?
 
-Typically two to three weeks from signed agreement to kickoff. The Audit can sometimes start sooner. For urgent work, Graham will say so on the discovery call.
+Typically two to three weeks from signed agreement to kickoff. The Review can sometimes start sooner. For urgent work, Graham will say so on the discovery call.
 
 ## Are prices in Australian dollars?
 
@@ -64,4 +64,4 @@ The Sprint is one intensive build in four weeks — pick a process, we deliver i
 
 ## Can I combine packages?
 
-Yes. The most common path is: Audit first, then a Sprint on the highest-ROI opportunity, then a Retainer to keep compounding. Each step is optional and you decide after you have the report.
+Yes. The most common path is: Review first, then a Sprint on the highest-ROI opportunity, then a Retainer to keep compounding. Each step is optional and you decide after you have the report.

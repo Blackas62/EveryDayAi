@@ -77,7 +77,7 @@ export default function Home() {
                 Practical AI for Australian small and mid-sized businesses.
               </h1>
               <p className="mt-6 text-xl leading-relaxed text-dark-foreground/90">
-                Fixed-price audits, 4-week implementation sprints, and ongoing advisory — built on 20+ years running finance and systems inside Western Australian civil, construction, and mining-services businesses.
+                Fixed-price readiness reviews, 4-week implementation sprints, and ongoing advisory — built on 20+ years running finance and systems inside Western Australian civil, construction, and mining-services businesses.
               </p>
               <p className="mt-4 text-base leading-relaxed text-dark-muted">
                 After 20+ years in finance and operations, I got my hands dirty

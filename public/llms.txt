@@ -8,7 +8,7 @@ Unlike most AI consultants — who come from a pure technology background — Gr
 
 ## Core Services
 
-- [AI Readiness Audit](https://everydayaiwithgraham.com/services#ai-readiness-audit) — **1 week, from AUD $2,500.** A written report ranking the 5 highest-value AI opportunities in a business, scored by payback, effort, and risk. Includes discovery call, systems review, and a 90-minute walk-through.
+- [AI Readiness Review](https://everydayaiwithgraham.com/services#ai-readiness-review) — **1 week, from AUD $2,500.** A written report ranking the 5 highest-value AI opportunities in a business, scored by payback, effort, and risk. Includes discovery call, systems review, and a 90-minute walk-through.
 - [AI Implementation Sprint](https://everydayaiwithgraham.com/services#ai-implementation-sprint) — **4 weeks, from AUD $12,000.** Pick one workflow, we build and deploy the AI-powered replacement and train the team. Client ends the sprint with a working system, not a slide deck.
 - [AI Advisor Retainer](https://everydayaiwithgraham.com/services#ai-advisor-retainer) — **Ongoing, from AUD $1,500/month, 3-month minimum.** Monthly strategy call, async Q&A, one quarterly implementation included.
 

@@ -54,7 +54,7 @@ const organizationJsonLd = {
   url: "https://everydayaiwithgraham.com",
   logo: "https://everydayaiwithgraham.com/graham.jpg",
   description:
-    "Australian AI consulting practice serving small-to-mid businesses. Productised packages for AI readiness audits, implementation sprints, and ongoing advisory — with a focus on Western Australian civil, mining-services, and construction SMEs.",
+    "Australian AI consulting practice serving small-to-mid businesses. Productised packages for AI readiness reviews, implementation sprints, and ongoing advisory — with a focus on Western Australian civil, mining-services, and construction SMEs.",
   founder: { "@id": "https://everydayaiwithgraham.com/#graham" },
   areaServed: { "@type": "Country", name: "Australia" },
   address: {
