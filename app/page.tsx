@@ -72,12 +72,12 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:py-32">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-sm font-medium tracking-widest text-accent uppercase">EveryDay AI with Graham</p>
-              <h1 className="mt-3 font-display text-6xl tracking-tight sm:text-7xl lg:text-8xl">
-                G&apos;day, I&apos;m Graham.
+              <p className="text-sm font-medium tracking-widest text-accent uppercase">G&apos;day, I&apos;m Graham</p>
+              <h1 className="mt-3 font-display text-5xl tracking-tight sm:text-6xl lg:text-7xl">
+                Practical AI for Australian small and mid-sized businesses.
               </h1>
               <p className="mt-6 text-xl leading-relaxed text-dark-foreground/90">
-                I help Australian businesses make sense of AI — and put it to work.
+                Fixed-price audits, 4-week implementation sprints, and ongoing advisory — built on 20+ years running finance and systems inside Western Australian civil, construction, and mining-services businesses.
               </p>
               <p className="mt-4 text-base leading-relaxed text-dark-muted">
                 After 20+ years in finance and operations, I got my hands dirty

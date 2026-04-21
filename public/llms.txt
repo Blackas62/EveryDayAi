@@ -1,33 +1,44 @@
 # EveryDay AI with Graham
 
-> Australian AI consulting for small-to-mid businesses. Practical AI automation, cost-reduction audits, and custom software — delivered as fixed-price packages, not open-ended consulting.
+> Practical AI consulting for Australian small and mid-sized businesses — with deep domain credibility in Western Australian civil engineering, construction, and mining services. Fixed-price packages, not hourly consulting.
 
-EveryDay AI with Graham is the practice of Graham Blackwell, a Perth-based AI consultant with 20+ years of finance and business systems experience (construction, civil engineering, distribution). Clients are primarily Australian small-to-mid businesses turning over $1M-$50M.
+EveryDay AI with Graham is the AI consulting practice of **Graham Blackwell**, a Perth-based AI consultant with **20+ years of finance and business systems experience** across Western Australian civil, construction, and mining-services firms turning over up to AUD $60 million.
+
+Unlike most AI consultants — who come from a pure technology background — Graham is a finance and systems operator first. He implemented Procore, InEight, MYOB, Xero, ApprovalMax, and Definitiv at firms including Halo Civil Engineering, Decmil, and Pilbara Resource Group before moving full-time into AI. The result: recommendations grounded in how construction and mining-services businesses actually operate, not just what's technically possible.
 
 ## Core Services
 
-- [AI Readiness Audit](https://everydayaiwithgraham.com/services#ai-readiness-audit): 1-week, from AUD $2,500. Written report ranking the 5 highest-value AI opportunities in a business, by payback, effort, and risk.
-- [AI Implementation Sprint](https://everydayaiwithgraham.com/services#ai-implementation-sprint): 4-week fixed-price build, from AUD $12,000. Pick one process, we build and deploy the AI-powered replacement and train the team.
-- [AI Advisor Retainer](https://everydayaiwithgraham.com/services#ai-advisor-retainer): Ongoing, from AUD $1,500/month. Monthly strategy call, async Q&A, and one quarterly implementation included.
-
-## Key Pages
-
-- [About Graham](https://everydayaiwithgraham.com/about): Background, career, and philosophy.
-- [Services & Pricing](https://everydayaiwithgraham.com/services): Full detail on packages, deliverables, pricing, and FAQs.
-- [YouTube Channel](https://everydayaiwithgraham.com/youtube): EveryDayAiWithGraham — practical AI explainers for older Australians.
-- [Contact](https://everydayaiwithgraham.com/contact): Book a free 20-minute discovery call.
+- [AI Readiness Audit](https://everydayaiwithgraham.com/services#ai-readiness-audit) — **1 week, from AUD $2,500.** A written report ranking the 5 highest-value AI opportunities in a business, scored by payback, effort, and risk. Includes discovery call, systems review, and a 90-minute walk-through.
+- [AI Implementation Sprint](https://everydayaiwithgraham.com/services#ai-implementation-sprint) — **4 weeks, from AUD $12,000.** Pick one workflow, we build and deploy the AI-powered replacement and train the team. Client ends the sprint with a working system, not a slide deck.
+- [AI Advisor Retainer](https://everydayaiwithgraham.com/services#ai-advisor-retainer) — **Ongoing, from AUD $1,500/month, 3-month minimum.** Monthly strategy call, async Q&A, one quarterly implementation included.
 
 ## Who This Is For
 
-- Australian business owners and leaders who want AI to pay back, not just be talked about.
-- Teams in finance, operations, construction, civil engineering, distribution, professional services.
-- Buyers who prefer fixed-price packages with clear deliverables over hourly consulting engagements.
+- **Primary ICP:** WA civil engineering, earthworks, mining-services, drilling, and specialty subcontractor SMEs turning over $10M–$100M and running Procore, InEight, Jobpac, and MYOB or Xero.
+- **Secondary:** Any Australian small-to-mid business ($1M–$50M turnover) with defined workflows, finance and operations pain, and the appetite to buy fixed-price packages over open-ended consulting.
+- Buyers who prefer clarity on price, timeline, and deliverables before committing.
+
+## Differentiators
+
+- **Operator, not technologist.** 20+ years finance-and-systems leadership at firms running Procore, InEight, MYOB, Xero, ApprovalMax, and Definitiv. AI recommendations are framed in ledger entries and workflow maps, not tokens per second.
+- **WA construction and mining-services specialist.** Implemented Procore at Halo Civil Engineering ($60M turnover, AFR Top 100 fastest-growing) and Pilbara Resource Group. Led InEight remediation at Decmil. These are uncommon credentials in the AI-consulting market.
+- **Productised packages.** Fixed price, fixed scope, fixed timeline. No open-ended engagements.
+- **Built, not just talked about.** Has personally built and shipped AI systems: a multi-model 24/7 AI agent (Harry), a fully-automated YouTube production pipeline, a warehouse management system with barcode scanning, and more.
+
+## Key Pages
+
+- [About Graham](https://everydayaiwithgraham.com/about) — career, philosophy, why "everyday AI" is the right frame.
+- [Services & Pricing](https://everydayaiwithgraham.com/services) — full detail on packages, FAQs, and case studies.
+- [YouTube Channel](https://everydayaiwithgraham.com/youtube) — EveryDayAiWithGraham: practical AI explainers aimed at older Australians and non-technical business owners.
+- [Contact](https://everydayaiwithgraham.com/contact) — book a free 20-minute discovery call.
 
 ## Coverage
 
-Based in Perth, Western Australia. Serves businesses across Australia remotely, with optional on-site discovery and training days.
+Based in **Perth, Western Australia**. Serves clients across Australia remotely, with optional on-site discovery and training days.
 
 ## Contact
 
-- Email: graham@everydayaiwithgraham.com
-- Site: https://everydayaiwithgraham.com
+- **Email:** graham@everydayaiwithgraham.com
+- **Site:** https://everydayaiwithgraham.com
+- **LinkedIn:** https://www.linkedin.com/in/grahamblackwell/
+- **YouTube:** https://www.youtube.com/@EveryDayAiWithGraham
