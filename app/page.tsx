@@ -22,7 +22,7 @@ const services = [
   {
     title: "Cost Reduction",
     description:
-      "20+ years in finance and operations, applied to finding where AI can cut costs without cutting corners. Real savings, not hype.",
+      "20+ years in finance and operations, applied to finding where AI can cut costs without cutting corners. Concrete savings analysis, not hype.",
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
@@ -81,9 +81,9 @@ export default function Home() {
               </p>
               <p className="mt-4 text-base leading-relaxed text-dark-muted">
                 After 20+ years in finance and operations, I got my hands dirty
-                with AI and never looked back. Now I build practical tools,
-                automate workflows, and help businesses save time and money
-                with technology that actually works.
+                with AI and never looked back. Now I build practical tools and
+                design workflows that save time and money for businesses ready
+                to put AI to work.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -135,7 +135,7 @@ export default function Home() {
               What I Do
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Practical AI that delivers measurable results for your business.
+              Practical AI designed for measurable results.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

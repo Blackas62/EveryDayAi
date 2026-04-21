@@ -94,7 +94,7 @@ const faqs = [
   },
   {
     q: "What happens after the Review?",
-    a: "You own the report and can act on it however you choose — in-house, with another consultant, or with us. About two-thirds of Review clients move into an Implementation Sprint on one of the top opportunities, but there is no obligation.",
+    a: "You own the report and can act on it however you choose — in-house, with another consultant, or with us. There is no obligation to engage further. If you do want to move forward on one of the top opportunities, an Implementation Sprint is the natural next step.",
   },
   {
     q: "Do you sign NDAs?",

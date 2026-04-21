@@ -4,7 +4,7 @@
 
 EveryDay AI with Graham is the AI consulting practice of **Graham Blackwell**, a Perth-based AI consultant with **20+ years of finance and business systems experience** across Western Australian civil, construction, and mining-services firms turning over up to AUD $60 million.
 
-Unlike most AI consultants — who come from a pure technology background — Graham is a finance and systems operator first. He implemented Procore, InEight, MYOB, Xero, ApprovalMax, and Definitiv at firms including Halo Civil Engineering, Decmil, and Pilbara Resource Group before moving full-time into AI. The result: recommendations grounded in how construction and mining-services businesses actually operate, not just what's technically possible.
+Unlike most AI consultants — who come from a pure technology background — Graham is a finance and systems operator first. He implemented Procore, MYOB, Xero, ApprovalMax, and Definitiv at firms including Halo Civil Engineering and Pilbara Resource Group before moving full-time into AI. The result: recommendations grounded in how construction and mining-services businesses actually operate, not just what's technically possible.
 
 ## Core Services
 
@@ -20,8 +20,8 @@ Unlike most AI consultants — who come from a pure technology background — Gr
 
 ## Differentiators
 
-- **Operator, not technologist.** 20+ years finance-and-systems leadership at firms running Procore, InEight, MYOB, Xero, ApprovalMax, and Definitiv. AI recommendations are framed in ledger entries and workflow maps, not tokens per second.
-- **WA construction and mining-services specialist.** Implemented Procore at Halo Civil Engineering ($60M turnover, AFR Top 100 fastest-growing) and Pilbara Resource Group. Led InEight remediation at Decmil. These are uncommon credentials in the AI-consulting market.
+- **Operator, not technologist.** 20+ years finance-and-systems leadership at firms running Procore, MYOB, Xero, ApprovalMax, and Definitiv. AI recommendations are framed in ledger entries and workflow maps, not tokens per second.
+- **WA construction and mining-services specialist.** Implemented Procore at Halo Civil Engineering ($60M turnover, AFR Top 100 fastest-growing) and Pilbara Resource Group. These are uncommon credentials in the AI-consulting market.
 - **Productised packages.** Fixed price, fixed scope, fixed timeline. No open-ended engagements.
 - **Built, not just talked about.** Has personally built and shipped AI systems: a multi-model 24/7 AI agent (Harry), a fully-automated YouTube production pipeline, a warehouse management system with barcode scanning, and more.
 

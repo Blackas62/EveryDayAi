@@ -90,7 +90,6 @@ const personJsonLd = {
   ],
   alumniOf: [
     { "@type": "Organization", name: "Halo Civil Engineering" },
-    { "@type": "Organization", name: "Decmil" },
     { "@type": "Organization", name: "Pilbara Resource Group" },
   ],
   address: {

@@ -23,7 +23,7 @@ const aboutPageJsonLd = {
 const faqs: { q: string; a: string }[] = [
   {
     q: "Who is Graham Blackwell?",
-    a: "Graham Blackwell is an Australian AI consultant based in Perth, Western Australia. He spent 20+ years in finance and business systems leadership at Halo Civil Engineering, Decmil, and Pilbara Resource Group before moving full-time into practical AI consulting for small-to-mid businesses.",
+    a: "Graham Blackwell is an Australian AI consultant based in Perth, Western Australia. He spent 20+ years in finance and business systems leadership at firms including Halo Civil Engineering and Pilbara Resource Group before moving full-time into practical AI consulting for small-to-mid businesses.",
   },
   {
     q: "What does Graham Blackwell do?",
@@ -35,11 +35,11 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What industries does Graham work with?",
-    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore at Halo Civil Engineering and Pilbara Resource Group, and InEight remediation at Decmil.",
+    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore at Halo Civil Engineering and Pilbara Resource Group.",
   },
   {
     q: "What is Graham's professional background?",
-    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he was part of a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior roles include Business Systems Manager at Decmil and Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
+    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he was part of a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior to that he was Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
   },
 ];
 
@@ -150,10 +150,10 @@ export default function AboutPage() {
                   about what AI can actually do for businesses.
                 </p>
                 <p>
-                  Now I help other businesses do the same. Not with jargon or
-                  hype, but with practical solutions built by someone who
-                  understands both the technology and the business problems
-                  it&apos;s solving.
+                  Now I&apos;m offering that same approach to other Australian
+                  businesses. Not with jargon or hype, but with practical
+                  solutions designed by someone who understands both the
+                  technology and the business problems it&apos;s solving.
                 </p>
               </div>
             </div>
