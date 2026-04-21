@@ -61,10 +61,10 @@ const offers = [
     price: "From AUD $1,500 / month",
     duration: "Ongoing, 3-month minimum",
     summary:
-      "For businesses that want AI to keep compounding. Monthly strategy call, async help when you get stuck, and one small implementation per quarter — built into the fee.",
+      "For businesses that want AI to keep compounding. Monthly strategy call, email and chat help when you get stuck, and one small implementation per quarter — built into the fee.",
     deliverables: [
       "Monthly 60-minute strategy call",
-      "Unlimited async Q&A (email / chat) during business hours",
+      "Unlimited email and chat questions during business hours — no appointment needed",
       "One quarterly implementation (up to 20 hours of build work)",
       "Priority booking for ad-hoc work at preferred rates",
       "Quarterly written review of what's working and what's next",

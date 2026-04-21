@@ -1,3 +1,5 @@
+import nodemailer from "nodemailer";
+
 export async function sendContactEmail({
   name,
   email,
@@ -9,37 +11,31 @@ export async function sendContactEmail({
   company: string;
   message: string;
 }) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+  const user = process.env.GMAIL_USER;
+  const pass = process.env.GMAIL_APP_PASSWORD;
+  if (!user || !pass) throw new Error("GMAIL_USER or GMAIL_APP_PASSWORD not configured");
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from: "EveryDay AI <noreply@everydayaiwithgraham.com>",
-      to: "graham.blackwell18@gmail.com",
-      subject: `Website enquiry from ${name}${company ? ` (${company})` : ""}`,
-      reply_to: email,
-      html: `
-        <h2>New website enquiry</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}
-        <hr />
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
-      `,
-    }),
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user, pass },
   });
 
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Resend API error ${res.status}: ${body}`);
-  }
-
-  return res.json();
+  return transporter.sendMail({
+    from: `"EveryDay AI Website" <${user}>`,
+    to: "Graham@EveryDayAiWithGraham.com",
+    subject: `Website enquiry from ${name}${company ? ` (${company})` : ""}`,
+    replyTo: email,
+    html: `
+      <h2>New website enquiry</h2>
+      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}
+      <hr />
+      <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
+    `,
+  });
 }
 
 function escapeHtml(str: string) {
