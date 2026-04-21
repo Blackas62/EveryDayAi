@@ -3,7 +3,7 @@ import { Manrope, Space_Grotesk, Special_Gothic_Condensed_One, Geist_Mono } from
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { VoiceWidget } from "@/components/voice-widget";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
