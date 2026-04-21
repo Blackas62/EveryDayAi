@@ -39,7 +39,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What is Graham's professional background?",
-    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he led a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior roles include Business Systems Manager at Decmil and Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
+    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he was part of a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior roles include Business Systems Manager at Decmil and Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
   },
 ];
 
