@@ -7,6 +7,7 @@ declare global {
         "elevenlabs-convai": {
           "agent-id"?: string;
           "default-expanded"?: string;
+          transcript?: string;
           children?: React.ReactNode;
         };
       }
@@ -20,7 +21,7 @@ export function VoiceWidget() {
 
   return (
     <>
-      <elevenlabs-convai agent-id={agentId} default-expanded="true" />
+      <elevenlabs-convai agent-id={agentId} default-expanded="true" transcript="true" />
       <Script
         src="https://unpkg.com/@elevenlabs/convai-widget-embed"
         strategy="afterInteractive"

@@ -37,10 +37,6 @@ export async function POST(request: NextRequest) {
 
   const lead = extractLeadFromEvent(event);
 
-  if (!lead.name && !lead.email && !lead.phone) {
-    return Response.json({ ok: true, skipped: "no contact details captured" });
-  }
-
   try {
     const result = await notifyVoiceLead(lead);
     return Response.json({ ok: true, ...result });
