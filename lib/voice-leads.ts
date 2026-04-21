@@ -100,7 +100,7 @@ async function emailCaller(lead: VoiceLead) {
 
   const firstName = (lead.name || "").split(" ")[0] || "there";
   const packageLabel = {
-    audit: "AI Readiness Review",
+    review: "AI Readiness Review",
     sprint: "AI Implementation Sprint",
     retainer: "AI Advisor Retainer",
   }[lead.interest?.toLowerCase() || ""] || null;
