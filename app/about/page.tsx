@@ -8,9 +8,67 @@ export const metadata: Metadata = {
     "Graham Blackwell — from finance and operations to AI solutions. 20+ years of business experience, now helping companies work smarter with AI.",
 };
 
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://everydayaiwithgraham.com/about#webpage",
+  url: "https://everydayaiwithgraham.com/about",
+  name: "About Graham Blackwell — AI Consultant, Perth WA",
+  description:
+    "Background and credentials of Graham Blackwell — AI consultant based in Perth, Western Australia, focused on civil engineering, mining services, and construction SMEs.",
+  mainEntity: { "@id": "https://everydayaiwithgraham.com/#graham" },
+  isPartOf: { "@id": "https://everydayaiwithgraham.com/#organization" },
+};
+
+const faqs: { q: string; a: string }[] = [
+  {
+    q: "Who is Graham Blackwell?",
+    a: "Graham Blackwell is an Australian AI consultant based in Perth, Western Australia. He spent 20+ years in finance and business systems leadership at Halo Civil Engineering, Decmil, and Pilbara Resource Group before moving full-time into practical AI consulting for small-to-mid businesses.",
+  },
+  {
+    q: "What does Graham Blackwell do?",
+    a: "Graham helps Australian SMEs adopt AI through three productised offers: a fixed-price AI Readiness Review (from AUD $2,500), a 4-week AI Implementation Sprint (from AUD $12,000), and an ongoing AI Advisor Retainer (from AUD $1,500 per month). Common projects include accounts payable automation, document processing, and AI integrations with Procore, InEight, MYOB, and Xero.",
+  },
+  {
+    q: "Where is Graham Blackwell based?",
+    a: "Bayswater, Perth, Western Australia. Graham serves clients across Australia and has deep on-the-ground knowledge of the Western Australian civil construction and mining services sector.",
+  },
+  {
+    q: "What industries does Graham work with?",
+    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore at Halo Civil Engineering and Pilbara Resource Group, and InEight remediation at Decmil.",
+  },
+  {
+    q: "What is Graham's professional background?",
+    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he led a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior roles include Business Systems Manager at Decmil and Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://everydayaiwithgraham.com/about#faq",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Header with photo */}
       <section className="relative overflow-hidden bg-dark py-20 text-dark-foreground sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/40" />
@@ -130,6 +188,23 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-border/40 bg-muted/30 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            Frequently Asked Questions
+          </h2>
+          <dl className="mt-10 space-y-8">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <dt className="text-lg font-semibold tracking-tight">{f.q}</dt>
+                <dd className="mt-3 text-muted-foreground leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

@@ -88,6 +88,11 @@ const personJsonLd = {
     "AI automation for finance and operations",
     "Construction and civil engineering systems",
   ],
+  alumniOf: [
+    { "@type": "Organization", name: "Halo Civil Engineering" },
+    { "@type": "Organization", name: "Decmil" },
+    { "@type": "Organization", name: "Pilbara Resource Group" },
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Perth",
