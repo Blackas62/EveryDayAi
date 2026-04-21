@@ -27,7 +27,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does Graham Blackwell do?",
-    a: "Graham helps Australian SMEs adopt AI through three productised offers: a fixed-price AI Readiness Review (from AUD $2,500), a 4-week AI Implementation Sprint (from AUD $12,000), and an ongoing AI Advisor Retainer (from AUD $1,500 per month). Common projects include accounts payable automation, document processing, and AI integrations with Procore, InEight, MYOB, and Xero.",
+    a: "Graham helps Australian SMEs adopt AI through three productised offers: a fixed-price AI Readiness Review (from AUD $2,500), a 4-week AI Implementation Sprint (from AUD $12,000), and an ongoing AI Advisor Retainer (from AUD $1,500 per month). Focus areas include accounts payable automation, document processing, and AI assistants for finance and operations workflows. Graham knows the construction-stack systems most WA SMEs run — Procore, InEight, Jobpac, MYOB, Xero — from years implementing them firsthand.",
   },
   {
     q: "Where is Graham Blackwell based?",
