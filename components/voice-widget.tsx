@@ -6,6 +6,7 @@ declare global {
       interface IntrinsicElements {
         "elevenlabs-convai": {
           "agent-id"?: string;
+          "default-expanded"?: string;
           children?: React.ReactNode;
         };
       }
@@ -19,7 +20,7 @@ export function VoiceWidget() {
 
   return (
     <>
-      <elevenlabs-convai agent-id={agentId} />
+      <elevenlabs-convai agent-id={agentId} default-expanded="true" />
       <Script
         src="https://unpkg.com/@elevenlabs/convai-widget-embed"
         strategy="afterInteractive"
