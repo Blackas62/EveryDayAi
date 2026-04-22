@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 declare global {
@@ -21,6 +22,7 @@ declare global {
 
 export function VoiceWidget() {
   const agentId = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID;
+  const pathname = usePathname();
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -32,6 +34,7 @@ export function VoiceWidget() {
   }, []);
 
   if (!agentId) return null;
+  if (pathname?.startsWith("/interview/")) return null;
 
   return (
     <>
