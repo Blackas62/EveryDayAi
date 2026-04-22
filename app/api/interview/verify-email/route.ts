@@ -53,7 +53,14 @@ export async function POST(request: NextRequest) {
     return Response.json({ error: "Server misconfigured" }, { status: 500 });
   }
 
-  return Response.json({ ok: true, agentId, callCount: count, bookingId: ticket.bookingId });
+  return Response.json({
+    ok: true,
+    agentId,
+    callCount: count,
+    bookingId: ticket.bookingId,
+    clientName: ticket.name,
+    companyName: ticket.company ?? null,
+  });
 }
 
 async function notifyOveruse(bookingId: string, email: string, count: number) {

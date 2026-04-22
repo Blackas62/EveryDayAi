@@ -34,6 +34,8 @@ export function InterviewGate({ token, firstName, scheduledAt }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [agentId, setAgentId] = useState<string | null>(null);
   const [bookingId, setBookingId] = useState<string | null>(null);
+  const [clientName, setClientName] = useState<string | null>(null);
+  const [companyName, setCompanyName] = useState<string | null>(null);
 
   const when = new Date(scheduledAt).toLocaleString("en-AU", {
     dateStyle: "full",
@@ -56,6 +58,8 @@ export function InterviewGate({ token, firstName, scheduledAt }: Props) {
         ok?: boolean;
         agentId?: string;
         bookingId?: string;
+        clientName?: string | null;
+        companyName?: string | null;
         error?: string;
       };
       if (!res.ok || !data.ok || !data.agentId || !data.bookingId) {
@@ -64,6 +68,8 @@ export function InterviewGate({ token, firstName, scheduledAt }: Props) {
       }
       setAgentId(data.agentId);
       setBookingId(data.bookingId);
+      setClientName(data.clientName ?? null);
+      setCompanyName(data.companyName ?? null);
       setStep("ready");
     } catch {
       setError("Network error — try again.");
@@ -73,6 +79,10 @@ export function InterviewGate({ token, firstName, scheduledAt }: Props) {
   }
 
   if (step === "ready" && agentId && bookingId) {
+    const dynamicVars: Record<string, string> = { booking_id: bookingId };
+    if (clientName) dynamicVars.client_name = clientName;
+    if (companyName) dynamicVars.company_name = companyName;
+
     return (
       <div className="space-y-6">
         <div className="rounded-lg border border-border/60 bg-card p-6">
@@ -92,7 +102,7 @@ export function InterviewGate({ token, firstName, scheduledAt }: Props) {
           agent-id={agentId}
           default-expanded="true"
           transcript="true"
-          dynamic-variables={JSON.stringify({ booking_id: bookingId })}
+          dynamic-variables={JSON.stringify(dynamicVars)}
         />
         <Script
           src="https://unpkg.com/@elevenlabs/convai-widget-embed"
