@@ -33,6 +33,15 @@ export async function POST(request: NextRequest) {
   const rawBody = await request.text();
   const sigHeader = request.headers.get("x-cal-signature-256");
   if (!verifySignature(sigHeader, rawBody, secret)) {
+    const expected = createHmac("sha256", secret).update(rawBody).digest("hex");
+    console.warn("cal-webhook signature mismatch", {
+      headerNames: Array.from(request.headers.keys()),
+      sigHeader,
+      sigHeaderLen: sigHeader?.length,
+      expectedLen: expected.length,
+      bodyLen: rawBody.length,
+      bodyHead: rawBody.slice(0, 200),
+    });
     return Response.json({ error: "Invalid signature" }, { status: 401 });
   }
 
@@ -94,11 +103,13 @@ export async function POST(request: NextRequest) {
 
 function verifySignature(header: string | null, rawBody: string, secret: string): boolean {
   if (!header) return false;
+  // Cal.com may send as plain hex or with a "sha256=" prefix; accept both.
+  const stripped = header.trim().replace(/^sha256=/i, "");
   const expected = createHmac("sha256", secret).update(rawBody).digest("hex");
   const expectedBuf = Buffer.from(expected, "hex");
   let actualBuf: Buffer;
   try {
-    actualBuf = Buffer.from(header.trim(), "hex");
+    actualBuf = Buffer.from(stripped, "hex");
   } catch {
     return false;
   }
