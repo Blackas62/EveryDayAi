@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: "/", disallow: ["/interview/", "/api/"] },
       {
         userAgent: [
           "GPTBot",
@@ -24,6 +24,7 @@ export default function robots(): MetadataRoute.Robots {
           "CCBot",
         ],
         allow: "/",
+        disallow: ["/interview/", "/api/"],
       },
     ],
     sitemap: "https://everydayaiwithgraham.com/sitemap.xml",
