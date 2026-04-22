@@ -31,15 +31,15 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Where is Graham Blackwell based?",
-    a: "Bayswater, Perth, Western Australia. Graham serves clients across Australia and has deep on-the-ground knowledge of the Western Australian civil construction and mining services sector.",
+    a: "Perth, Western Australia. Graham serves clients across Australia and has deep on-the-ground knowledge of the Western Australian civil construction and mining services sector.",
   },
   {
     q: "What industries does Graham work with?",
-    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore at Halo Civil Engineering and Pilbara Resource Group.",
+    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore, Xero, MYOB, ApprovalMax, Definitiv payroll, Calxa, and AssetAccountant across civil construction and mining-services businesses, including a full MYOB-to-Xero migration across multiple entities.",
   },
   {
     q: "What is Graham's professional background?",
-    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he was part of a successful business rescue from voluntary administration and managed finance across multiple entities at $60 million turnover. Prior to that he was Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDay AI with Graham, aimed at older Australians learning to use AI.",
+    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he helped lead the successful rescue of another civil contractor out of voluntary administration via a Deed of Company Arrangement, integrating and building it up as part of the Halo group, and managed finance across multiple entities at $60 million turnover. Prior to that he was Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDayAiWithGraham, sharing practical AI ideas for Australian businesses and plain-English explainers for older Australians.",
   },
 ];
 
@@ -143,17 +143,16 @@ export default function AboutPage() {
                 <p>
                   So I taught myself to build. Python, React, Next.js, APIs —
                   not from a CS degree, but from a genuine need to make things
-                  work. I built an AI assistant that manages my email and makes
-                  phone calls. I built a paediatric drug calculator for emergency nurses.
-                  I built a field sample scanner for geologists working on
-                  remote mining sites. I built a spreadsheet column-correction
-                  tool that cleans up messy data imports. I built a cycling
+                  work. I built an AI assistant that manages my email and
+                  makes phone calls, a paediatric drug calculator for
+                  emergency nurses, and a field sample scanner for geologists
+                  on remote mining sites. I also put together a spreadsheet
+                  column-correction tool for messy data imports, a cycling
                   activity analyser that turns Garmin data into useful
-                  insights. I built an interactive audiobook player that uses
-                  AI to explain ideas on the fly. I built an automated video
-                  production pipeline for my YouTube channel. Each project
-                  taught me something new about what AI can actually do for
-                  businesses.
+                  insights, an AI-powered interactive audiobook player to help students with PDF study materials, and an
+                  automated video production pipeline for my YouTube channel.
+                  Each project taught me something new about what AI can
+                  actually do for businesses.
                 </p>
                 <p>
                   Now I&apos;m offering that same approach to other Australian
@@ -184,7 +183,7 @@ export default function AboutPage() {
                       rel="noopener noreferrer"
                       className="font-medium text-primary hover:underline"
                     >
-                      EveryDay AI with Graham
+                      EveryDayAiWithGraham
                     </a>
                     , where I share practical AI ideas for Australian
                     businesses — and plain-English explainers for older
