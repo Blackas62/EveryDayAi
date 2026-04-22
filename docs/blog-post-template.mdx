@@ -1,0 +1,44 @@
+---
+title: Smoke test — not a real post
+description: Placeholder MDX used to verify the blog pipeline. File starts with underscore, so the loader skips it.
+date: 2026-04-22
+author: Graham Blackwell
+tags:
+  - meta
+faq:
+  - question: Why is this file here?
+    answer: It shows the shape a real blog post needs — title, description, date, optional updated/author/tags/image/faq — and gives us something to eyeball when we scaffold the route. Rename to remove the underscore and drop the `.example` suffix only if you want it published.
+  - question: How do I add a real post?
+    answer: Drop a `.mdx` file into `content/blog/` with the front-matter above, write the body in markdown or MDX, commit, push. The sitemap, RSS feed, and JSON-LD update automatically.
+---
+
+# Heading one
+
+This is a smoke-test post. It exists only so we can verify the pipeline end-to-end before Graham writes the first real article.
+
+## Heading two
+
+Markdown features that should render: **bold**, *italic*, `inline code`, [links](https://everydayaiwithgraham.com), lists:
+
+- One
+- Two
+- Three
+
+A fenced code block:
+
+```ts
+export function hello(name: string) {
+  return `Hello, ${name}`;
+}
+```
+
+> A blockquote — should render with a left border.
+
+| Column A | Column B |
+| --- | --- |
+| one | two |
+| three | four |
+
+---
+
+End of smoke test.

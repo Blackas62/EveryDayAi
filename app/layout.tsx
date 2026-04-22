@@ -44,6 +44,16 @@ export const metadata: Metadata = {
     locale: "en_AU",
     siteName: "EveryDay AI with Graham",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        {
+          url: "https://everydayaiwithgraham.com/feed.xml",
+          title: "EveryDay AI with Graham — Blog RSS",
+        },
+      ],
+    },
+  },
 };
 
 const organizationJsonLd = {
