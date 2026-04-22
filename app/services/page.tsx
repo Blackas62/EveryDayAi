@@ -286,12 +286,21 @@ export default function ServicesPage() {
                     {o.rightFor}
                   </div>
 
-                  <Link
-                    href={`/contact?package=${o.id}`}
-                    className="mt-auto inline-flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
-                  >
-                    Enquire about this package
-                  </Link>
+                  {o.id === "ai-readiness-review" ? (
+                    <Link
+                      href="https://cal.com/everydayaiwithgraham/ai-readiness-review-intake-call"
+                      className="mt-auto inline-flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
+                    >
+                      Book your Readiness Review
+                    </Link>
+                  ) : (
+                    <Link
+                      href={`/contact?package=${o.id}`}
+                      className="mt-auto inline-flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
+                    >
+                      Enquire about this package
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}
