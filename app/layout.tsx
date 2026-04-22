@@ -54,6 +54,11 @@ export const metadata: Metadata = {
       ],
     },
   },
+  verification: {
+    other: {
+      "msvalidate.01": "2DC8F390A33ECAB4A9EAFCEC691A9022",
+    },
+  },
 };
 
 const organizationJsonLd = {
