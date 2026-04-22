@@ -11,6 +11,7 @@ declare global {
           "agent-id"?: string;
           "default-expanded"?: string;
           transcript?: string;
+          "dynamic-variables"?: string;
           children?: React.ReactNode;
         };
       }
