@@ -80,7 +80,7 @@ export default function Home() {
                 Fixed-price readiness reviews, 4-week implementation sprints, and ongoing advisory — built on 20+ years running finance and systems inside Western Australian civil, construction, and mining-services businesses.
               </p>
               <p className="mt-4 text-base leading-relaxed text-dark-muted">
-                After 20+ years in finance and operations, I got my hands dirty
+                After 20+ years in finance and operations, I started building
                 with AI and never looked back. Now I build practical tools and
                 design workflows that save time and money for businesses ready
                 to put AI to work.

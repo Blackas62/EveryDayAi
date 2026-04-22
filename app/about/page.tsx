@@ -135,19 +135,25 @@ export default function AboutPage() {
                   spreadsheets and systems. AI changes everything.
                 </p>
                 <p>
-                  I&apos;ve been writing about business disruption and
-                  data-driven decision-making since 2018 — so this isn&apos;t a
-                  bandwagon for me. It&apos;s the direction I&apos;ve been
-                  pointing at for years, finally with the tools to back it up.
+                  I&apos;ve been watching business disruption and data-driven
+                  decision-making since 2018 — so this isn&apos;t a bandwagon
+                  for me. It&apos;s the direction I&apos;ve been pointing at
+                  for years, finally with the tools to back it up.
                 </p>
                 <p>
                   So I taught myself to build. Python, React, Next.js, APIs —
                   not from a CS degree, but from a genuine need to make things
                   work. I built an AI assistant that manages my email and makes
-                  phone calls. I built a nurse safety app for hospital workers.
-                  I built an automated video production pipeline for
-                  my YouTube channel. Each project taught me something new
-                  about what AI can actually do for businesses.
+                  phone calls. I built a paediatric drug calculator for emergency nurses.
+                  I built a field sample scanner for geologists working on
+                  remote mining sites. I built a spreadsheet column-correction
+                  tool that cleans up messy data imports. I built a cycling
+                  activity analyser that turns Garmin data into useful
+                  insights. I built an interactive audiobook player that uses
+                  AI to explain ideas on the fly. I built an automated video
+                  production pipeline for my YouTube channel. Each project
+                  taught me something new about what AI can actually do for
+                  businesses.
                 </p>
                 <p>
                   Now I&apos;m offering that same approach to other Australian
@@ -180,9 +186,11 @@ export default function AboutPage() {
                     >
                       EveryDay AI with Graham
                     </a>
-                    , specifically aimed at older Australians who want to
-                    understand AI without the tech jargon. Because this stuff
-                    matters for everyone, not just the tech crowd.
+                    , where I share practical AI ideas for Australian
+                    businesses — and plain-English explainers for older
+                    Australians who want to understand this stuff without the
+                    tech jargon. Because AI matters for everyone, not just the
+                    tech crowd.
                   </p>
                 </div>
               </div>
