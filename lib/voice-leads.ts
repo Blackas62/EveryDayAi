@@ -16,12 +16,54 @@ export type VoiceLead = {
   transcript_url?: string;
 };
 
-export async function notifyVoiceLead(lead: VoiceLead) {
-  const tasks: [string, Promise<unknown>][] = [
-    ["operator_email", emailOperator(lead)],
-    ["telegram", telegramVoiceLead(lead)],
+/**
+ * Returns true if the lead's details match Graham testing Bruce himself.
+ * Used to suppress the Telegram alert (but NOT the email log) on self-tests,
+ * so the first real visitor call is the first Telegram ping Graham sees.
+ *
+ * Match is loose on purpose — Graham has used several variants of his own
+ * details over 20+ test calls and typos happen in voice-to-text.
+ */
+function looksLikeGrahamTest(lead: VoiceLead): boolean {
+  const selfEmails = [
+    "graham@everydayaiwithgraham.com",
+    "graham.blackwell@bigpond.com",
+    "graham.blackwell18@gmail.com",
+    "grahame.blackwell@bigpond.com", // the "Graeme with an H" variant Bruce captured once
   ];
-  if (lead.email) {
+  const email = (lead.email || "").trim().toLowerCase();
+  if (email && selfEmails.some((s) => email.includes(s.toLowerCase()))) return true;
+
+  // Phone: strip everything but digits, compare last 9 (handles +61, 0 prefix, spaces)
+  const phoneDigits = (lead.phone || "").replace(/\D/g, "");
+  if (phoneDigits.endsWith("409289514")) return true;
+
+  // Business name: any Graham-owned test persona
+  const biz = (lead.business_name || "").toLowerCase();
+  if (biz.includes("graham") && biz.includes("plumb")) return true;
+
+  // Name on its own is not enough — real clients may be named Graham too.
+  return false;
+}
+
+export async function notifyVoiceLead(lead: VoiceLead) {
+  const isSelfTest = looksLikeGrahamTest(lead);
+  if (isSelfTest) {
+    console.log("voice-lead: self-test detected, suppressing Telegram", {
+      email: lead.email,
+      phone: lead.phone,
+      business: lead.business_name,
+      call_id: lead.call_id,
+    });
+  }
+
+  const tasks: [string, Promise<unknown>][] = [
+    ["operator_email", emailOperator(lead, isSelfTest)],
+  ];
+  if (!isSelfTest) {
+    tasks.push(["telegram", telegramVoiceLead(lead)]);
+  }
+  if (lead.email && !isSelfTest) {
     tasks.push(["caller_email", emailCaller(lead)]);
   }
 
@@ -49,11 +91,12 @@ function gmailTransporter() {
   });
 }
 
-async function emailOperator(lead: VoiceLead) {
+async function emailOperator(lead: VoiceLead, isSelfTest: boolean = false) {
   const user = process.env.GMAIL_USER!;
-  const subject = lead.name
+  const tag = isSelfTest ? "[self-test] " : "";
+  const subject = tag + (lead.name
     ? `Voice lead from ${lead.name}${lead.business_name ? ` (${lead.business_name})` : ""}`
-    : "Voice lead — caller did not leave details";
+    : "Voice lead — caller did not leave details");
 
   const rows: [string, string | undefined][] = [
     ["Name", lead.name],
