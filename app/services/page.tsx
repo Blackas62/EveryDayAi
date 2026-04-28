@@ -314,6 +314,68 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Specialist productised offer — Always On Front Desk */}
+      <section className="border-t py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            Specialist productised offer
+          </p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+            Always On Front Desk — for tradies and real estate agents
+          </h2>
+          <p className="mt-3 max-w-3xl text-muted-foreground">
+            A different shape of engagement. Fixed price AUD $5,000 to install an
+            AI-powered first responder on your existing phone number and website,
+            so the leads you currently miss — after hours, while you&apos;re on a
+            job, while you&apos;re at an open home — get caught and summarised
+            straight to your mobile within seconds.
+          </p>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            <div className="lg:col-span-2 rounded-xl border border-border/60 bg-card p-6 sm:p-8">
+              <h3 className="text-lg font-semibold">
+                Your competitor calls back in 47 hours. Yours can call back in 90 seconds.
+              </h3>
+              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>One week setup, 30 days of fine-tuning support included.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>Lives on your existing business number via call forwarding — no number change.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>Hard rule: the AI never quotes prices and never makes commitments on your behalf.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>Live demos for plumber, electrician, builder, and real estate — try before you buy.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col justify-between rounded-xl border border-accent/40 bg-accent/5 p-6 sm:p-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  Try a live demo
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Talk to the AI as if you were a customer. Voice or text. About 60–90 seconds.
+                </p>
+              </div>
+              <Link
+                href="/services/always-on-front-desk"
+                className="mt-6 inline-flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
+              >
+                See Always On Front Desk
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Voice assistant nudge */}
       <section className="border-t bg-accent/5 py-10 sm:py-12">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
