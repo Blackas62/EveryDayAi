@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SHOW_YOUTUBE } from "@/lib/feature-flags";
 
 const services = [
   {
@@ -215,41 +216,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YouTube Preview */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              Latest from YouTube
-            </h2>
-            <p className="mt-3 text-muted-foreground">
-              Making AI accessible for everyday Australians.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm"
-              >
-                <div className="aspect-video bg-secondary" />
-                <div className="p-4">
-                  <div className="h-4 w-3/4 rounded bg-secondary" />
-                  <div className="mt-2 h-3 w-1/2 rounded bg-secondary" />
+      {/* YouTube Preview — gated by SHOW_YOUTUBE flag */}
+      {SHOW_YOUTUBE && (
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Latest from YouTube
+              </h2>
+              <p className="mt-3 text-muted-foreground">
+                Making AI accessible for everyday Australians.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm"
+                >
+                  <div className="aspect-video bg-secondary" />
+                  <div className="p-4">
+                    <div className="h-4 w-3/4 rounded bg-secondary" />
+                    <div className="mt-2 h-3 w-1/2 rounded bg-secondary" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/youtube"
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                See all videos &rarr;
+              </Link>
+            </div>
           </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/youtube"
-              className="text-sm font-medium text-primary hover:underline"
-            >
-              See all videos &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Footer CTA — dark with gold CTA */}
       <section className="bg-dark py-16 sm:py-24 text-dark-foreground">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { getLatestVideos } from "@/lib/youtube";
+import { SHOW_YOUTUBE } from "@/lib/feature-flags";
 
 export const metadata: Metadata = {
   title: "YouTube",
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function YouTubePage() {
+  if (!SHOW_YOUTUBE) notFound();
   const videos = await getLatestVideos(9);
 
   return (

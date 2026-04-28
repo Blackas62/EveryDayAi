@@ -4,13 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { SHOW_YOUTUBE } from "@/lib/feature-flags";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/youtube", label: "YouTube" },
+  ...(SHOW_YOUTUBE ? [{ href: "/youtube", label: "YouTube" }] : []),
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -82,6 +82,13 @@ export function Nav() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="mt-4 inline-flex h-10 items-center justify-center rounded-xl bg-accent px-4 text-sm font-medium text-foreground shadow-sm transition-all hover:bg-accent/85"
+              >
+                Get in Touch
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>

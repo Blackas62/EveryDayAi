@@ -152,10 +152,10 @@ async function emailClient(input: { to: string; name: string; interviewUrl: stri
   const html = `
     <p>Hi ${esc(firstName)},</p>
     <p>Thanks for booking your AI Readiness Review with me. Your intake call is confirmed for <strong>${esc(when)}</strong> (Perth time).</p>
-    <p>The call runs 45–55 minutes with <strong>Ian</strong>, my AI intake assistant. He'll walk you through a structured conversation about your business so I've got real context before I write your report.</p>
+    <p>The call runs 45–55 minutes with <strong>George</strong>, my AI intake assistant. He'll walk you through a structured conversation about your business so I've got real context before I write your report.</p>
     <p><strong>Your unique interview link:</strong></p>
     <p><a href="${input.interviewUrl}">${input.interviewUrl}</a></p>
-    <p>Open it at your scheduled time. The page will ask you to confirm the email address you booked with, then Ian will join on voice.</p>
+    <p>Open it at your scheduled time. The page will ask you to confirm the email address you booked with, then George will join on voice.</p>
     <p>If anything changes, just reply to this email.</p>
     <p>Cheers,<br>Graham Blackwell<br>EveryDay AI with Graham</p>
   `;

@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "AI Readiness Review — Interview",
-  description: "Your unique interview link with Ian, Graham's AI intake assistant.",
+  description: "Your unique interview link with George, Graham's AI intake assistant.",
   robots: { index: false, follow: false },
 };
 
@@ -30,7 +30,7 @@ export default async function InterviewPage({ params }: { params: Promise<Params
               Your intake interview
             </h1>
             <p className="mt-4 text-lg text-dark-muted">
-              Hi {firstName} — Ian's Graham's AI intake assistant. Confirm it's you, then he'll join on voice.
+              Hi {firstName} — George's Graham's AI intake assistant. Confirm it's you, then he'll join on voice.
             </p>
           </div>
         </section>

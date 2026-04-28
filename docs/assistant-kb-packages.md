@@ -14,6 +14,14 @@ Perth, Western Australia. Most engagements run remotely over video calls and sha
 
 Yes. The Review is a one-off, fixed-price engagement. You own the written report and can act on it however you choose — in-house, with another provider, or with us. There is no obligation. Most clients do go on to a Sprint on one of the top opportunities the Review identifies, but it is not required.
 
+## How do I book and pay for the Readiness Review?
+
+Every engagement starts with a free 30-minute discovery call with Graham. You can book that directly from the services page. There is no option to self-serve purchase the Review from the website — Graham deliberately qualifies every engagement on a discovery call first. If the fit is right, he emails you a secure payment link and a booking link for the Review kickoff interview, which you can complete in your own time. This keeps bad-fit engagements off his books and means he only takes on work he can genuinely deliver value on.
+
+## What happens on the free 30-minute discovery call?
+
+You describe what you are trying to achieve. Graham asks a handful of sharp questions about your business, your current workflows, and where you think AI might help. By the end of the call, both of you know whether any of the three packages is a fit. If yes, Graham emails you a payment link and booking link for next steps. If no, he will say so and, where possible, point you at someone better suited.
+
 ## What size business do you work with?
 
 Our sweet spot is Australian small-to-mid businesses turning over between $1 million and $50 million. These businesses are established enough to have real workflows worth automating, and small enough that we deal directly with the owner or senior leader — no account-manager layers. We also occasionally work with larger organisations on specific departmental projects, and with sole traders or very small businesses where the fit is right.
@@ -40,7 +48,7 @@ Yes. Everything shared during any engagement is confidential. We are happy to si
 
 ## What is the discovery call?
 
-A free 20-minute video call with Graham to understand what you are trying to achieve, decide whether there is a sensible fit, and agree on the next step. No prep required. If it turns out we are not the right people for the job, Graham will tell you that and, where possible, point you at someone who is.
+A free 30-minute video call with Graham to understand what you are trying to achieve, decide whether there is a sensible fit, and agree on the next step. No prep required. Booked directly from the services page. If it turns out we are not the right people for the job, Graham will tell you that and, where possible, point you at someone who is.
 
 ## How quickly can we start?
 

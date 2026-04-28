@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
   const state = await completeCall(bookingId);
   const transcript = extractTranscript(data);
 
-  const subject = `Readiness Review — Ian transcript for booking ${bookingId}`;
+  const subject = `Readiness Review — George transcript for booking ${bookingId}`;
   const markdown = buildMarkdown({
     bookingId,
     conversationId,
@@ -152,7 +152,7 @@ function buildMarkdown(input: {
     lines.push("_Transcript not included in webhook payload._");
   } else {
     for (const turn of input.transcript) {
-      const role = turn.role === "agent" ? "Ian" : turn.role === "user" ? "Client" : turn.role ?? "?";
+      const role = turn.role === "agent" ? "George" : turn.role === "user" ? "Client" : turn.role ?? "?";
       const text = (turn.message ?? turn.text ?? "").trim();
       if (!text) continue;
       lines.push(`**${role}:** ${text}`);
@@ -180,7 +180,7 @@ async function emailGraham(input: { subject: string; markdown: string; bookingId
   )}</pre>`;
 
   await transport.sendMail({
-    from: `"Ian (Readiness intake)" <${user}>`,
+    from: `"George (Readiness intake)" <${user}>`,
     to: user,
     subject: input.subject,
     text: input.markdown,

@@ -73,7 +73,7 @@ async function notifyOveruse(bookingId: string, email: string, count: number) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
-        text: `⚠️ Ian interview call cap exceeded\nBooking: ${bookingId}\nEmail: ${email}\nAttempts: ${count}`,
+        text: `⚠️ George interview call cap exceeded\nBooking: ${bookingId}\nEmail: ${email}\nAttempts: ${count}`,
         disable_web_page_preview: true,
       }),
     });

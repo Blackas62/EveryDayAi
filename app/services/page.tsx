@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { SHOW_YOUTUBE } from "@/lib/feature-flags";
 import {
   Card,
   CardContent,
@@ -125,17 +126,21 @@ const caseStudies = [
     result:
       "End-to-end PWA delivered on Replit + Neon Postgres. Demonstrates real-time geolocation pairing, WebSocket messaging, healthcare-worker UX, and a responsible-AI moderation pattern — the kind of architecture that transfers cleanly to workforce-safety and field-services use cases.",
   },
-  {
-    title: "YouTube Pipeline",
-    subtitle: "Automated Video Production",
-    problem:
-      "Producing YouTube videos as a solo creator is incredibly time-consuming. Scripting, recording, editing, B-roll, captions, music — each video was taking days of manual work.",
-    solution:
-      "Built a fully automated pipeline: AI topic scouting, script generation, HeyGen avatar recording, ElevenLabs voiceover, automated B-roll selection from a self-generating library, and a custom Studio editor for final assembly.",
-    tech: ["Python", "Flask", "HeyGen API", "ElevenLabs", "LTX-Video", "Google Veo", "FFmpeg", "Claude API"],
-    result:
-      "End-to-end video production with a custom local studio editor. B-roll library grows automatically via daily cron jobs. Videos go from topic to final export with minimal manual intervention.",
-  },
+  ...(SHOW_YOUTUBE
+    ? [
+        {
+          title: "YouTube Pipeline",
+          subtitle: "Automated Video Production",
+          problem:
+            "Producing YouTube videos as a solo creator is incredibly time-consuming. Scripting, recording, editing, B-roll, captions, music — each video was taking days of manual work.",
+          solution:
+            "Built a fully automated pipeline: AI topic scouting, script generation, HeyGen avatar recording, ElevenLabs voiceover, automated B-roll selection from a self-generating library, and a custom Studio editor for final assembly.",
+          tech: ["Python", "Flask", "HeyGen API", "ElevenLabs", "LTX-Video", "Google Veo", "FFmpeg", "Claude API"],
+          result:
+            "End-to-end video production with a custom local studio editor. B-roll library grows automatically via daily cron jobs. Videos go from topic to final export with minimal manual intervention.",
+        },
+      ]
+    : []),
   {
     title: "Stock Manager",
     subtitle: "Warehouse Management System",
@@ -221,10 +226,10 @@ export default function ServicesPage() {
               See the packages
             </Link>
             <Link
-              href="/contact"
+              href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
               className="inline-flex h-11 items-center justify-center rounded-xl border border-primary/20 bg-background px-7 text-sm font-medium text-primary transition-all hover:bg-primary/5"
             >
-              Book a discovery call
+              Book a free 30-min discovery call
             </Link>
           </div>
         </div>
@@ -237,7 +242,7 @@ export default function ServicesPage() {
             Which package is right for you?
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Most businesses start with the Review so we can agree on the highest-value opportunity before any build work begins.
+            Every engagement starts with a free 30-minute discovery call so we can check the fit and agree on the highest-value opportunity before any paid work begins.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl space-y-10">
@@ -260,7 +265,6 @@ export default function ServicesPage() {
                     {o.tagline}
                   </CardDescription>
                   <div className="pt-3">
-                    <p className="text-2xl font-semibold text-primary">{o.price}</p>
                     <p className="text-xs text-muted-foreground">{o.duration}</p>
                   </div>
                 </CardHeader>
@@ -286,12 +290,14 @@ export default function ServicesPage() {
                     {o.rightFor}
                   </div>
 
+                  <p className="text-sm text-muted-foreground">{o.price}</p>
+
                   {o.id === "ai-readiness-review" ? (
                     <Link
-                      href="https://cal.com/everydayaiwithgraham/ai-readiness-review-intake-call"
+                      href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
                       className="mt-auto inline-flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
                     >
-                      Book your Readiness Review
+                      Book a free 30-min discovery call
                     </Link>
                   ) : (
                     <Link
@@ -417,10 +423,10 @@ export default function ServicesPage() {
             Not sure which package fits?
           </h2>
           <p className="mt-4 text-primary-foreground/80">
-            Book a free 20-minute call. We'll listen, ask a few sharp questions, and tell you honestly which package — if any — is the right next step.
+            Book a free 30-minute discovery call. We'll listen, ask a few sharp questions, and tell you honestly which package — if any — is the right next step.
           </p>
           <Link
-            href="/contact"
+            href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
             className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-white px-7 text-sm font-medium text-primary shadow-sm transition-all hover:bg-white/90 hover:shadow-md"
           >
             Book a discovery call

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "./contact-form";
+import { SHOW_YOUTUBE, YOUTUBE_CHANNEL_URL } from "@/lib/feature-flags";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -53,17 +54,19 @@ export default function ContactPage() {
                   roles. I typically respond within 24 hours.
                 </p>
               </div>
-              <div>
-                <h3 className="text-sm font-semibold">YouTube</h3>
-                <a
-                  href="https://www.youtube.com/@EveryDayAiWithGraham"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-sm text-muted-foreground hover:text-primary"
-                >
-                  @EveryDayAiWithGraham
-                </a>
-              </div>
+              {SHOW_YOUTUBE && (
+                <div>
+                  <h3 className="text-sm font-semibold">YouTube</h3>
+                  <a
+                    href={YOUTUBE_CHANNEL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-sm text-muted-foreground hover:text-primary"
+                  >
+                    @EveryDayAiWithGraham
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
