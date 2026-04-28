@@ -1,0 +1,28 @@
+{
+  "agents": {
+    "plumber": {
+      "agent_id": "agent_6901kq9dcazafakvty97gmtqhkfj",
+      "kb_id": "tQVcUMuzGnqcexQkuSQ2",
+      "name": "AOFD \u2014 Sample Plumbing Co",
+      "first_message": "Sample Plumbing Co, this is Sam, how can I help today?"
+    },
+    "electrician": {
+      "agent_id": "agent_4801kq9dcx7nff8r06xn2ezdmdwa",
+      "kb_id": "MUdmplU9pQwRpm1o3QWJ",
+      "name": "AOFD \u2014 Sample Electrical Co",
+      "first_message": "Sample Electrical Co, this is Sam, how can I help?"
+    },
+    "builder": {
+      "agent_id": "agent_8201kq9dcz6bfswak6pw9a25evgk",
+      "kb_id": "oGw3EDxOhZ4f5MZjEuvU",
+      "name": "AOFD \u2014 Sample Builders Co",
+      "first_message": "Sample Builders Co, Sam speaking \u2014 what can I do for you?"
+    },
+    "real-estate": {
+      "agent_id": "agent_7801kq9dd16yf9hbjdx82yjzjyyd",
+      "kb_id": "AMFoyxfXDujvZDuNPQE9",
+      "name": "AOFD \u2014 Sample Property Co",
+      "first_message": "Sample Property Co, this is Sam, how can I help?"
+    }
+  }
+}

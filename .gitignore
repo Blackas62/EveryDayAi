@@ -42,3 +42,6 @@ next-env.d.ts
 
 # gstack local workspace
 .gstack/
+
+# Bruce ConvAI agent config snapshots — point-in-time backups, kept locally only
+scripts/bruce-agent-backup-*.json
