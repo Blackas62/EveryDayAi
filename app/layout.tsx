@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { VoiceWidget } from "@/components/voice-widget";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SHOW_YOUTUBE, YOUTUBE_CHANNEL_URL } from "@/lib/feature-flags";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -79,7 +80,7 @@ const organizationJsonLd = {
     addressCountry: "AU",
   },
   sameAs: [
-    "https://www.youtube.com/@EveryDayAiWithGraham",
+    ...(SHOW_YOUTUBE ? [YOUTUBE_CHANNEL_URL] : []),
     "https://www.linkedin.com/in/grahamblackwell/",
   ],
 };
@@ -105,7 +106,6 @@ const personJsonLd = {
   ],
   alumniOf: [
     { "@type": "Organization", name: "Halo Civil Engineering" },
-    { "@type": "Organization", name: "Pilbara Resource Group" },
   ],
   address: {
     "@type": "PostalAddress",
@@ -114,7 +114,7 @@ const personJsonLd = {
     addressCountry: "AU",
   },
   sameAs: [
-    "https://www.youtube.com/@EveryDayAiWithGraham",
+    ...(SHOW_YOUTUBE ? [YOUTUBE_CHANNEL_URL] : []),
     "https://www.linkedin.com/in/grahamblackwell/",
   ],
 };

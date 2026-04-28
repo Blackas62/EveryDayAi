@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SHOW_YOUTUBE, YOUTUBE_CHANNEL_URL } from "@/lib/feature-flags";
 
 export const metadata: Metadata = {
   title: "About",
@@ -23,7 +24,7 @@ const aboutPageJsonLd = {
 const faqs: { q: string; a: string }[] = [
   {
     q: "Who is Graham Blackwell?",
-    a: "Graham Blackwell is an Australian AI consultant based in Perth, Western Australia. He spent 20+ years in finance and business systems leadership at firms including Halo Civil Engineering and Pilbara Resource Group before moving full-time into practical AI consulting for small-to-mid businesses.",
+    a: "Graham Blackwell is an Australian AI consultant based in Perth, Western Australia. He spent 20+ years in finance and business systems leadership at WA civil and mining-services firms, most recently Halo Civil Engineering, before moving full-time into practical AI consulting for small-to-mid businesses.",
   },
   {
     q: "What does Graham Blackwell do?",
@@ -35,11 +36,11 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What industries does Graham work with?",
-    a: "Graham specialises in Western Australian civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs in the AUD $10M to $100M revenue range. He has hands-on experience implementing Procore, Xero, MYOB, ApprovalMax, Definitiv payroll, Calxa, and AssetAccountant across civil construction and mining-services businesses, including a full MYOB-to-Xero migration across multiple entities.",
+    a: "Graham works with Australian small and mid-sized businesses — from sole traders through to civil engineering, earthworks, mining services, drilling, and specialty subcontractor SMEs. He has hands-on experience implementing Procore, Xero, MYOB, ApprovalMax, Definitiv payroll, Calxa, and AssetAccountant across civil construction and mining-services businesses, including a full MYOB-to-Xero migration across multiple entities.",
   },
   {
     q: "What is Graham's professional background?",
-    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he helped lead the successful rescue of another civil contractor out of voluntary administration via a Deed of Company Arrangement, integrating and building it up as part of the Halo group, and managed finance across multiple entities at $60 million turnover. Prior to that he was Business Systems Specialist at Pilbara Resource Group. He also runs the YouTube channel EveryDayAiWithGraham, sharing practical AI ideas for Australian businesses and plain-English explainers for older Australians.",
+    a: "Graham was Finance and Business Systems Manager at Halo Civil Engineering through to October 2025, where he helped lead the successful rescue of another civil contractor out of voluntary administration via a Deed of Company Arrangement, integrating and building it up as part of the Halo group, and managed finance across multiple entities at $60 million turnover. Prior to that he held a Business Systems Specialist role at a WA mining-services firm, implementing Procore, MYOB, Xero, ApprovalMax, and Definitiv across the operation.",
   },
 ];
 
@@ -149,8 +150,8 @@ export default function AboutPage() {
                   on remote mining sites. I also put together a spreadsheet
                   column-correction tool for messy data imports, a cycling
                   activity analyser that turns Garmin data into useful
-                  insights, an AI-powered interactive audiobook player to help students with PDF study materials, and an
-                  automated video production pipeline for my YouTube channel.
+                  insights, an AI-powered interactive audiobook player to help students with PDF study materials, and a fully
+                  automated video production pipeline.
                   Each project taught me something new about what AI can
                   actually do for businesses.
                 </p>
@@ -175,22 +176,24 @@ export default function AboutPage() {
                     usually with a group called the Fat Bastards — or involved
                     with the local Men&apos;s Shed.
                   </p>
-                  <p>
-                    I run a YouTube channel called{" "}
-                    <a
-                      href="https://www.youtube.com/@EveryDayAiWithGraham"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-primary hover:underline"
-                    >
-                      EveryDayAiWithGraham
-                    </a>
-                    , where I share practical AI ideas for Australian
-                    businesses — and plain-English explainers for older
-                    Australians who want to understand this stuff without the
-                    tech jargon. Because AI matters for everyone, not just the
-                    tech crowd.
-                  </p>
+                  {SHOW_YOUTUBE && (
+                    <p>
+                      I run a YouTube channel called{" "}
+                      <a
+                        href={YOUTUBE_CHANNEL_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-primary hover:underline"
+                      >
+                        EveryDayAiWithGraham
+                      </a>
+                      , where I share practical AI ideas for Australian
+                      businesses — and plain-English explainers for older
+                      Australians who want to understand this stuff without the
+                      tech jargon. Because AI matters for everyone, not just
+                      the tech crowd.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

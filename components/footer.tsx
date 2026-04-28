@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SHOW_YOUTUBE, YOUTUBE_CHANNEL_URL } from "@/lib/feature-flags";
 
 export function Footer() {
   return (
@@ -31,20 +32,30 @@ export function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/youtube"
-                  className="hover:text-accent transition-colors"
-                >
-                  YouTube
-                </Link>
-              </li>
+              {SHOW_YOUTUBE && (
+                <li>
+                  <Link
+                    href="/youtube"
+                    className="hover:text-accent transition-colors"
+                  >
+                    YouTube
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link
                   href="/about"
                   className="hover:text-accent transition-colors"
                 >
                   About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:text-accent transition-colors"
+                >
+                  Privacy
                 </Link>
               </li>
             </ul>
@@ -62,16 +73,18 @@ export function Footer() {
                   Get in Touch
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/@EveryDayAiWithGraham"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  YouTube Channel
-                </a>
-              </li>
+              {SHOW_YOUTUBE && (
+                <li>
+                  <a
+                    href={YOUTUBE_CHANNEL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    YouTube Channel
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -81,6 +94,14 @@ export function Footer() {
             <p className="text-sm text-dark-muted">
               Perth, Western Australia
             </p>
+            <a
+              href="https://share.google/D7CV14jahwS69enTm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm text-dark-muted hover:text-accent transition-colors"
+            >
+              Google Business Profile
+            </a>
           </div>
         </div>
 
