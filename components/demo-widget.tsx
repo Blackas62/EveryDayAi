@@ -1,7 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname } from "next/navigation";
 
 declare global {
   namespace React {
@@ -19,14 +18,11 @@ declare global {
   }
 }
 
-export function VoiceWidget() {
-  const agentId = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID;
-  const pathname = usePathname();
+type Props = {
+  agentId: string;
+};
 
-  if (!agentId) return null;
-  if (pathname?.startsWith("/interview/")) return null;
-  if (pathname?.startsWith("/demo/")) return null;
-
+export function DemoWidget({ agentId }: Props) {
   return (
     <>
       <elevenlabs-convai agent-id={agentId} transcript="true" />

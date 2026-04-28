@@ -109,3 +109,19 @@
     @apply font-heading tracking-tight;
   }
 }
+
+/* ElevenLabs ConvAI floating widget (Bruce) — scale down on mobile so the
+   launcher button and chat window don't dominate the viewport on phones.
+   The widget auto-positions bottom-right, so transform-origin must match. */
+@media (max-width: 768px) {
+  elevenlabs-convai {
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
+}
+@media (max-width: 640px) {
+  elevenlabs-convai {
+    transform: scale(0.75);
+    transform-origin: bottom right;
+  }
+}
