@@ -9,7 +9,7 @@ import { SHOW_YOUTUBE } from "@/lib/feature-flags";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/services/always-on-front-desk", label: "Always On Front Desk" },
+  { href: "/services/always-on-front-desk", label: "AI Front Desk" },
   ...(SHOW_YOUTUBE ? [{ href: "/youtube", label: "YouTube" }] : []),
   { href: "/about", label: "About" },
 ];
