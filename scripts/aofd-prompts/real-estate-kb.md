@@ -1,4 +1,4 @@
-# Sample Property Co — Knowledge Base
+# Sample Property Co, Knowledge Base
 
 This is a sample real estate agency used to demonstrate the Always On Front Desk system. All details below are fictional but realistic for a small-to-mid Perth real estate office.
 
@@ -31,13 +31,13 @@ Eastern and inner Perth: Mount Lawley, Inglewood, Highgate, Maylands, Bayswater,
 "The price guide on the listing is what the vendor's looking for. If you're seriously considering it, the listing agent can talk you through where they're at on price after you've inspected."
 
 **"Are there other offers on it?"**
-"That's confidential — but the listing agent can talk you through interest level on a callback if you're considering an offer."
+"That's confidential, but the listing agent can talk you through interest level on a callback if you're considering an offer."
 
 **"Will the vendor accept [$X]?"**
 "All offers go through the listing agent in writing. They'll talk you through what the vendor's open to."
 
 **"What's the suburb like?"**
-"Happy to send through some general info on the area. The listing agent can give you a more grounded read on the callback — they live and work in the patch."
+"Happy to send through some general info on the area. The listing agent can give you a more grounded read on the callback, they live and work in the patch."
 
 **"When can I see it?"**
 "Open home is [next time from listing], or we can book a private inspection. What works for you?"
@@ -61,10 +61,10 @@ Eastern and inner Perth: Mount Lawley, Inglewood, Highgate, Maylands, Bayswater,
 
 ## Edge cases
 
-- **Caller wants to make an offer right now over the chat:** "Offers go through the listing agent in writing — I'll get them to call you back inside business hours. What's the best mobile?"
+- **Caller wants to make an offer right now over the chat:** "Offers go through the listing agent in writing, I'll get them to call you back inside business hours. What's the best mobile?"
 - **Caller is from interstate:** capture which state + when they're next in Perth (often a buying trip). Inspection options usually need to bunch into that window.
 - **Caller is using a buyer's agent:** capture the buyer's agent's name + contact. Listing agent will deal directly with them.
-- **Caller is anxious / disappointed** (e.g. missed an open home, listing already under offer): be warm. "Sorry to hear that — let me put you on the list for similar listings as they come up."
+- **Caller is anxious / disappointed** (e.g. missed an open home, listing already under offer): be warm. "Sorry to hear that, let me put you on the list for similar listings as they come up."
 
 ## Confidentiality rules
 
@@ -82,7 +82,7 @@ Eastern and inner Perth: Mount Lawley, Inglewood, Highgate, Maylands, Bayswater,
 ## Words and phrases to avoid
 
 - "Investment opportunity" (sounds salesy)
-- "Don't miss out" / "won't last long" (pressure tactics — bad)
+- "Don't miss out" / "won't last long" (pressure tactics, bad)
 - "Off-market" claims about a listed property
 - Specific dollar amounts beyond what's in the listing
 - "Get in quick" (cringe)
