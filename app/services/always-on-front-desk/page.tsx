@@ -74,7 +74,7 @@ export default function AlwaysOnFrontDeskPage() {
             Try a live demo
           </Link>
           <Link
-            href="/contact?topic=always-on-front-desk"
+            href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
             className="inline-block rounded-md border border-border bg-background py-3 px-6 text-base font-medium hover:bg-secondary"
           >
             Book a discovery call
@@ -271,7 +271,7 @@ export default function AlwaysOnFrontDeskPage() {
           whether Always On Front Desk is the right fit for how you operate.
         </p>
         <Link
-          href="/contact?topic=always-on-front-desk"
+          href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
           className="inline-block rounded-md bg-primary text-primary-foreground py-3 px-6 text-base font-medium"
         >
           Book a discovery call

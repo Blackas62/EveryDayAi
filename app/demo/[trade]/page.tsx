@@ -1,4 +1,4 @@
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -36,10 +36,7 @@ export default async function DemoPage({ params }: RouteProps) {
   const gate = token ? await verifyDemoGate(token) : null;
   const unlocked = gate !== null;
 
-  const hdrs = await headers();
   const refUrl = `/demo/${cfg.slug}`;
-  const host = hdrs.get("host") ?? "everydayaiwithgraham.com";
-  const baseUrl = `https://${host}`;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
@@ -58,7 +55,7 @@ export default async function DemoPage({ params }: RouteProps) {
 
       <p className="mt-4 text-base text-muted-foreground">
         Persona for this demo: <strong className="text-foreground">{cfg.personaName}</strong>{" "}
-        (a fictional business). The AI you&apos;ll talk to is the same agent we&apos;d set up for a paying client, configured for a {cfg.slug.replace("-", " ")}.
+        (a fictional business). The AI you&apos;ll talk to is the same agent we&apos;d set up for a paying client, configured for {cfg.personaDescriptor}.
       </p>
 
       <div className="mt-8 rounded-lg border border-border bg-card p-6">
@@ -81,7 +78,7 @@ export default async function DemoPage({ params }: RouteProps) {
                 On a paying engagement we wire this AI to your actual phone number, your calendar, and your team&apos;s mobile so missed calls become captured leads in seconds. Fixed price AUD $5,000.
               </p>
               <Link
-                href={`${baseUrl}/contact?topic=always-on-front-desk`}
+                href="https://cal.com/everydayaiwithgraham/book-a-free-30-min-discovery-call"
                 className="mt-4 inline-block rounded-md bg-primary text-primary-foreground py-2 px-4 text-sm font-medium"
               >
                 Book a free 30-min discovery call
